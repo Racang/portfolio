@@ -19,6 +19,9 @@ export const genaImages = {
   imgImage:      `${base}gena/86066520aadbfe8c77dcc2a3285d5d5892de2b11.png`, // Main hero visual block
   imgImage1899:  `${base}gena/836ee22e7302d13e324a18b589d39d7b97988ed6.png`, // Context visual graphic
 
+  // ─── Work Process Flowchart Block ────────────────────────────────────────────────
+  imgWorkProcess: `${base}gena/work-process.png`, // Work process flowchart
+
   // ─── Challenge & Background ────────────────────────────────────────────────
   imgAi1:        `${base}gena/ddd4472ccf634957679528d765008d5a7c6765b2.png`, // AI complexity icon
   imgElearning1: `${base}gena/0996cbd8888d40dbdaabc8f612cae3a08cdc72f5.png`, // Steep learning curve icon

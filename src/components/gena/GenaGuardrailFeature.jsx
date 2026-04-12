@@ -121,13 +121,13 @@ export default function GenaGuardrailFeature() {
         
         <div className="flex flex-col lg:flex-row gap-[40px] items-center w-full">
           <div className="flex items-center gap-[16px] shrink-0 justify-center flex-wrap lg:flex-nowrap">
-            <div className="relative w-[300px] lg:w-[363px] h-[272px] rounded-[16px] border border-[#e7e8ed] shrink-0 bg-white">
+            <div className="relative w-[300px] lg:w-[363px] h-[272px] rounded-[20px] border border-[#e7e8ed] shrink-0 bg-white">
                <div className="absolute inset-0 overflow-hidden rounded-[16px]">
                   <img src={genaImages.imgRectangle82750} alt="Before" className="absolute h-[120.52%] left-[-31.57%] max-w-none top-[-10.5%] w-[163.52%]" />
                </div>
             </div>
             <img src={genaImages.imgFoundationArrowLeft} className="size-[48px] rotate-180 shrink-0" alt="Arrow Right" />
-            <div className="relative w-[300px] lg:w-[363px] h-[272px] rounded-[16px] border-4 border-[#524fff] shrink-0 bg-white">
+            <div className="relative w-[300px] lg:w-[363px] h-[272px] rounded-[20px] border-4 border-[#524fff] shrink-0 bg-white">
                <div className="absolute inset-0 overflow-hidden rounded-[16px]">
                   <img src={genaImages.imgRectangle82751} alt="After" className="absolute h-[147.1%] left-[-49.72%] max-w-none top-[-23.71%] w-[199.59%]" />
                </div>
