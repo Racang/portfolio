@@ -16,6 +16,9 @@
  */
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+
+const MotionLink = motion(Link)
 
 const ARROW_WHITE = `${import.meta.env.BASE_URL}images/btn/ba43d650bfed32aa6b7ab5060c5502ff9a78caf1.svg`
 const ARROW_CORAL = `${import.meta.env.BASE_URL}images/btn/4c0a9824e4e8a69a4a7aee406449ebe97c232bd7.svg`
@@ -24,7 +27,7 @@ const ARROW_CORAL = `${import.meta.env.BASE_URL}images/btn/4c0a9824e4e8a69a4a7ae
 const EASE = [0.25, 0.46, 0.45, 0.94]
 const TRANS = { duration: 0.26, ease: EASE }
 
-export default function Button({ variant = 'filled', href, children, className = '', ...rest }) {
+export default function Button({ variant = 'filled', href, to, children, className = '', ...rest }) {
   const [isHover, setIsHover]   = useState(false)
   const [isActive, setIsActive] = useState(false)
   const isInteract = isHover || isActive
@@ -40,8 +43,11 @@ export default function Button({ variant = 'filled', href, children, className =
     onTouchEnd:   () => { setIsActive(false); setIsHover(false) },
   }
 
-  const MotionTag = href ? motion.a : motion.button
-  const tagProps  = href ? { href, ...rest } : { type: 'button', ...rest }
+  // to  → react-router Link (respects basename automatically)
+  // href → plain <a> (external links, mailto:, tel:, PDFs)
+  // else → <button>
+  const MotionTag = to ? MotionLink : href ? motion.a : motion.button
+  const tagProps  = to ? { to, ...rest } : href ? { href, ...rest } : { type: 'button', ...rest }
 
   /* ── Filled (primary) ─────────────────────────────────────────────────── */
   if (variant === 'filled') {

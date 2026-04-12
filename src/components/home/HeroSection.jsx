@@ -79,7 +79,7 @@ export default function HeroSection() {
           {/* Buttons */}
           <motion.div variants={fadeLeft} className="flex gap-6 flex-wrap items-center">
             <Button
-              href="/resume.pdf"
+              href={`${import.meta.env.BASE_URL}resume.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               variant="filled"

@@ -222,9 +222,7 @@ export default function ProjectsSlider() {
                   >
                     {p.description}
                   </p>
-                  <Button href={`/projects/${p.slug}`} variant="outline">
-                    See more
-                  </Button>
+                  <Button to={`/projects/${p.slug}`} variant="outline">See more</Button>
                 </div>
 
               </div>
@@ -270,9 +268,7 @@ export default function ProjectsSlider() {
 
         {/* ── CTA — centered ───────────────────────────────────── */}
         <div className="flex justify-center mt-12">
-          <Button href="/projects" variant="filled">
-            See All Projects
-          </Button>
+          <Button to="/projects" variant="filled">See All Projects</Button>
         </div>
 
       </div>
