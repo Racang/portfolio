@@ -26,9 +26,12 @@ export default function GenaBrandDesign() {
 
         {/* Box 2 */}
         <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-[300px] relative">
-          <div className="bg-white border border-[#e7e8ed] border-solid content-stretch flex flex-col items-start p-[16px] relative rounded-[16px] shadow-grey-card shrink-0 w-full">
-            <div className="aspect-[400/300] relative rounded-[16px] shrink-0 w-full overflow-hidden flex items-center justify-center bg-[#fbf7ff]">
-              <img alt="" className="object-cover size-full rounded-[16px]" src={genaImages.imgRectangle82742} />
+          <div className="bg-white border border-[#e7e8ed] border-solid content-stretch flex flex-col items-start p-[16px] relative rounded-[16px] shadow-[0px_3px_16px_0px_rgba(24,74,234,0.09)] shrink-0 w-full">
+            <div className="aspect-[361/270.75] relative rounded-[16px] shrink-0 w-full">
+              <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[16px]">
+                <div className="absolute bg-[#fbf7ff] inset-0 rounded-[16px]" />
+                <img alt="" className="absolute max-w-none object-contain rounded-[16px] size-full" src={genaImages.imgRectangle82742} />
+              </div>
             </div>
           </div>
           <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start mt-2">
@@ -41,9 +44,12 @@ export default function GenaBrandDesign() {
 
         {/* Box 3 */}
         <div className="content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-h-px min-w-[300px] relative">
-          <div className="bg-white border border-[#e7e8ed] border-solid content-stretch flex flex-col items-start p-[16px] relative rounded-[16px] shadow-grey-card shrink-0 w-full">
-            <div className="aspect-[400/300] relative rounded-[16px] shrink-0 w-full overflow-hidden bg-white">
-              <img alt="" className="object-cover size-full rounded-[16px]" src={genaImages.imgRectangle82743} />
+          <div className="bg-white border border-[#e7e8ed] border-solid content-stretch flex flex-col items-start p-[16px] relative rounded-[16px] shadow-[0px_3px_16px_0px_rgba(24,74,234,0.09)] shrink-0 w-full">
+            <div className="aspect-[400/300] relative rounded-[16px] shrink-0 w-full">
+                <div className="absolute bg-white inset-0 rounded-[16px]" />
+                <div className="absolute inset-0 overflow-hidden rounded-[16px]">
+                  <img alt="" className="absolute h-[103.22%] left-0 max-w-none top-[-1.61%] w-full" src={genaImages.imgRectangle82743} />
+                </div>
             </div>
           </div>
           <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start mt-2">

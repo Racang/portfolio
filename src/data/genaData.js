@@ -6,51 +6,51 @@ const base = import.meta.env.BASE_URL;
 
 export const genaImages = {
   // ─── Hero & Project Intro ──────────────────────────────────────────────────
-  imgBackground: "http://localhost:3845/assets/f0ebbc3e26197ee5157a6876fd8c5ee3bdea95a1.svg", // SVG splash mask
-  imgComputer21: "http://localhost:3845/assets/db2f04457f0b478674721c461038ac1b4e33e4a9.png", // Intro card logo
+  imgBackground: `${base}gena/f0ebbc3e26197ee5157a6876fd8c5ee3bdea95a1.svg`, // SVG splash mask
+  imgComputer21: `${base}gena/db2f04457f0b478674721c461038ac1b4e33e4a9.png`, // Intro card logo
   
   // What I Did section icons
-  imgSearch1:    "http://localhost:3845/assets/578db9a410287f0dc20645d073d93b4b07f5e00e.png", // UX Research icon
-  imgContract1:  "http://localhost:3845/assets/f28831618009db6336d4f87317db6728a53d9542.png", // Info Architecture icon
-  imgPaint1:     "http://localhost:3845/assets/cda573fc5c1c6dd0de3b0b8319b26ea93e31c982.png", // Visual Design icon
-  imgComputer11: "http://localhost:3845/assets/4a05846c8768f24fb61a4e875c2db3fa18f65558.png", // Interaction icon
+  imgSearch1:    `${base}gena/578db9a410287f0dc20645d073d93b4b07f5e00e.png`, // UX Research icon
+  imgContract1:  `${base}gena/f28831618009db6336d4f87317db6728a53d9542.png`, // Info Architecture icon
+  imgPaint1:     `${base}gena/cda573fc5c1c6dd0de3b0b8319b26ea93e31c982.png`, // Visual Design icon
+  imgComputer11: `${base}gena/4a05846c8768f24fb61a4e875c2db3fa18f65558.png`, // Interaction icon
 
   // Main visual assets
-  imgImage:      "http://localhost:3845/assets/86066520aadbfe8c77dcc2a3285d5d5892de2b11.png", // Main hero visual block
-  imgImage1899:  "http://localhost:3845/assets/836ee22e7302d13e324a18b589d39d7b97988ed6.png", // Context visual graphic
+  imgImage:      `${base}gena/86066520aadbfe8c77dcc2a3285d5d5892de2b11.png`, // Main hero visual block
+  imgImage1899:  `${base}gena/836ee22e7302d13e324a18b589d39d7b97988ed6.png`, // Context visual graphic
 
   // ─── Challenge & Background ────────────────────────────────────────────────
-  imgAi1:        "http://localhost:3845/assets/ddd4472ccf634957679528d765008d5a7c6765b2.png", // AI complexity icon
-  imgElearning1: "http://localhost:3845/assets/0996cbd8888d40dbdaabc8f612cae3a08cdc72f5.png", // Steep learning curve icon
-  imgShape1:     "http://localhost:3845/assets/d85b09b61f4aece5a8df6fdfcd16aff09267a9dd.png", // Interface usability icon
-  imgArt1:       "http://localhost:3845/assets/246e003e4325e14a364d28ee624705517c51ee75.png", // Visual inconsistency icon
+  imgAi1:        `${base}gena/ddd4472ccf634957679528d765008d5a7c6765b2.png`, // AI complexity icon
+  imgElearning1: `${base}gena/0996cbd8888d40dbdaabc8f612cae3a08cdc72f5.png`, // Steep learning curve icon
+  imgShape1:     `${base}gena/d85b09b61f4aece5a8df6fdfcd16aff09267a9dd.png`, // Interface usability icon
+  imgArt1:       `${base}gena/246e003e4325e14a364d28ee624705517c51ee75.png`, // Visual inconsistency icon
   
   // ─── Brand Design System ───────────────────────────────────────────────────
-  imgRectangle82741: "http://localhost:3845/assets/8b0152e12fc1a86edf1a8c48c09f767f794a6950.png",
-  imgRectangle82742: "http://localhost:3845/assets/63df833ee3a88350bbcef17e594e17a59041b496.png",
-  imgRectangle82743: "http://localhost:3845/assets/d4fc113f524a80f48caaed157675c78281990f4c.png",
-  imgImage1:         "http://localhost:3845/assets/070f19353038a343ee2460c110687867ecc22003.png",
+  imgRectangle82741: `${base}gena/8b0152e12fc1a86edf1a8c48c09f767f794a6950.png`,
+  imgRectangle82742: `${base}gena/63df833ee3a88350bbcef17e594e17a59041b496.png`,
+  imgRectangle82743: `${base}gena/d4fc113f524a80f48caaed157675c78281990f4c.png`,
+  imgImage1:         `${base}gena/070f19353038a343ee2460c110687867ecc22003.png`,
 
   // ─── Guardrail Features ────────────────────────────────────────────────────
-  imgRectangle82744: "http://localhost:3845/assets/50f0506b133bf9b6c85af65f2cbae7ef15afbede.png", // UI preview sample
-  imgRectangle82745: "http://localhost:3845/assets/b6983327ecea7950ee5c140214eb9f73005d873b.png", // UI preview sample
-  imgRectangle82746: "http://localhost:3845/assets/7d53db5c52f64d6e091c91bd70646326bf471b95.png", // UI preview sample
-  imgRectangle82747: "http://localhost:3845/assets/4250e3765a3471a22edb621e983747325b66aba4.png", // UI preview sample
-  imgRectangle82748: "http://localhost:3845/assets/bd12a894503b5e6f43b92299ec0ca928cb0d9f82.png", // UI preview sample
-  imgRectangle82749: "http://localhost:3845/assets/723cfea29bd49884499b16b54328f83ec36aae6b.png", // UI preview sample
-  imgRectangle82750: "http://localhost:3845/assets/4c989b9ad8a6b60e9eea46bf80dbba08917eabb1.png", // UI preview sample
-  imgRectangle82751: "http://localhost:3845/assets/41a09a1d688bff41225c77a8ee3bba85a2911dfd.png", // UI preview sample
+  imgRectangle82744: `${base}gena/50f0506b133bf9b6c85af65f2cbae7ef15afbede.png`, // UI preview sample
+  imgRectangle82745: `${base}gena/b6983327ecea7950ee5c140214eb9f73005d873b.png`, // UI preview sample
+  imgRectangle82746: `${base}gena/7d53db5c52f64d6e091c91bd70646326bf471b95.png`, // UI preview sample
+  imgRectangle82747: `${base}gena/4250e3765a3471a22edb621e983747325b66aba4.png`, // UI preview sample
+  imgRectangle82748: `${base}gena/bd12a894503b5e6f43b92299ec0ca928cb0d9f82.png`, // UI preview sample
+  imgRectangle82749: `${base}gena/723cfea29bd49884499b16b54328f83ec36aae6b.png`, // UI preview sample
+  imgRectangle82750: `${base}gena/4c989b9ad8a6b60e9eea46bf80dbba08917eabb1.png`, // UI preview sample
+  imgRectangle82751: `${base}gena/41a09a1d688bff41225c77a8ee3bba85a2911dfd.png`, // UI preview sample
 
   // ─── Apply to other brands ─────────────────────────────────────────────────
-  imgRectangle82752: "http://localhost:3845/assets/1ab984c68a0794eef2a220d8187fe22d2d614c5e.png",
-  imgRectangle82753: "http://localhost:3845/assets/9d296413cabc45e65964d33d76e382f65614aba8.png",
+  imgRectangle82752: `${base}gena/1ab984c68a0794eef2a220d8187fe22d2d614c5e.png`,
+  imgRectangle82753: `${base}gena/9d296413cabc45e65964d33d76e382f65614aba8.png`,
 
   // ─── Structural Vectors & Layout Elements ──────────────────────────────────
-  imgBg:         "http://localhost:3845/assets/9fa9badac60eeadcfe3b07cf1a9b0d5dfc13892b.svg", // Tall purple bottom background component
-  imgUnion:      "http://localhost:3845/assets/daf8b5e5106bdbc89dbe1e2207bdca60a80ff3fd.svg", // Abstract decoration graphic
-  imgVector:     "http://localhost:3845/assets/dbc8d2c944802f5d842b86bc67e8ea6288d110c1.svg", // Supplemental background geometry
-  imgFrame:      "http://localhost:3845/assets/4f8d456d68f16c620f51974fd11cf83e6b2981bf.svg", // Card bounding frame layout piece
-  imgFoundationArrowLeft: "http://localhost:3845/assets/cc763c83d4c3b1b6db8060842f58fc7794bae8cd.svg", // Navigational Arrow icon
+  imgBg:         `${base}gena/9fa9badac60eeadcfe3b07cf1a9b0d5dfc13892b.svg`, // Tall purple bottom background component
+  imgUnion:      `${base}gena/daf8b5e5106bdbc89dbe1e2207bdca60a80ff3fd.svg`, // Abstract decoration graphic
+  imgVector:     `${base}gena/dbc8d2c944802f5d842b86bc67e8ea6288d110c1.svg`, // Supplemental background geometry
+  imgFrame:      `${base}gena/4f8d456d68f16c620f51974fd11cf83e6b2981bf.svg`, // Card bounding frame layout piece
+  imgFoundationArrowLeft: `${base}gena/cc763c83d4c3b1b6db8060842f58fc7794bae8cd.svg`, // Navigational Arrow icon
 };
 
 // ─── Gena project text content ───────────────────────────────────────────────

@@ -9,6 +9,7 @@ import GenaRoleSection from '../components/gena/GenaRoleSection';
 import GenaWhatIDid from '../components/gena/GenaWhatIDid';
 import GenaBackground from '../components/gena/GenaBackground';
 import GenaChallenge from '../components/gena/GenaChallenge';
+import GenaProcess from '../components/gena/GenaProcess';
 import GenaBrandDesign from '../components/gena/GenaBrandDesign';
 import GenaGuardrailFeature from '../components/gena/GenaGuardrailFeature';
 import GenaApplyBrand from '../components/gena/GenaApplyBrand';
@@ -48,8 +49,11 @@ export default function GenaPage() {
       {/* Full width challenge background block */}
       <GenaChallenge />
 
+      {/* 4. Work Process Flowchart Block */}
+      <GenaProcess />
+
       <div className="relative z-10 flex flex-col w-full max-w-[1440px] mx-auto">
-        {/* 4. Brand & Design block */}
+        {/* 5. Brand & Design block */}
         <GenaBrandDesign />
       </div>
 
