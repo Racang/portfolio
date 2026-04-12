@@ -4,7 +4,7 @@ const base = import.meta.env.BASE_URL
 
 export const homeImages = {
   // Hero section
-  heroBg:         `${base}/images/5b90ee961fe86954ac3684169c3bc4cb0709d028.svg`,  // Vector 4 (right-side blob)
+  heroBg:         `${base}images/5b90ee961fe86954ac3684169c3bc4cb0709d028.svg`,  // Vector 4 (right-side blob)
   heroDecor:      `${base}images/Home_Bannder_decor01.svg`,  // Group 1686550957
   heroGirl:       `${base}images/Home_Banner_girl.png`,  // a girl 2 character
 

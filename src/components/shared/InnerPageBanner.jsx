@@ -27,7 +27,7 @@ export default function InnerPageBanner({ title, subtitle }) {
         src={`${import.meta.env.BASE_URL}images/Banner_BG.png`}
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-top select-none pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover object-bottom select-none pointer-events-none"
       />
 
       {/* ── Title block — centred below the fixed nav ────────── */}

@@ -4,6 +4,7 @@
  */
 import { images } from '../data/mockData'
 import HomeNavbar      from '../components/home/HomeNavbar'
+import HomeFooter      from '../components/home/HomeFooter'
 import Banner          from '../components/Banner'
 import RoleInfoCard    from '../components/RoleInfoCard'
 import WhatIDid        from '../components/WhatIDid'
@@ -43,6 +44,11 @@ export default function TostemPage() {
 
         {/* 4. Phase I final UI */}
         <FinalUI />
+      </div>
+
+      {/* Footer */}
+      <div className="relative z-20 mt-10">
+        <HomeFooter />
       </div>
     </div>
   )
