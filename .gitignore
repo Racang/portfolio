@@ -1,5 +1,7 @@
-/dist/
-/node_modules/
+/dist/**
+/node_modules/**
 Rachaya_Portfolio.code-workspace
 Rachaya_Portfolio.iml
-/.idea/
+/.idea/**
+.idea/modules.xml
+**/.DS_Store
