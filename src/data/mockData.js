@@ -1,33 +1,36 @@
 // ─── Local image assets (stored in /public/images/) ─────────────────────────
+// import.meta.env.BASE_URL is '/' in dev and '/Rachaya_Portfolio/' on GitHub Pages
+const base = import.meta.env.BASE_URL
+
 export const images = {
   // Banner
-  background:   '/images/banner-background.svg',
-  union:        '/images/banner-union.svg',
+  background:   `${base}images/banner-background.svg`,
+  union:        `${base}images/banner-union.svg`,
 
   // Role card (Tostem logo group)
-  logo:         '/images/logo-tostem.svg',
+  logo:         `${base}images/logo-tostem.svg`,
 
   // What I Did — node: UI_ Homepage 1
-  uiHomepage1:  '/images/whatidid-ui-homepage.png',
+  uiHomepage1:  `${base}images/whatidid-ui-homepage.png`,
 
   // Design Direction — one flat image per card (no layered overlays)
-  direction1:   '/images/design-direction-01.png',
-  direction2:   '/images/design-direction-02.png',
-  direction3:   '/images/design-direction-03.png',
+  direction1:   `${base}images/design-direction-01.png`,
+  direction2:   `${base}images/design-direction-02.png`,
+  direction3:   `${base}images/design-direction-03.png`,
 
   // Phase I Final UI — 12 screens matching Figma node order
-  styleGuide:   '/images/finalui-style-guide.png',
-  iprpcHome:    '/images/finalui-iprpc-home.png',
-  iprpcNews2:   '/images/finalui-iprpc-news-02.png',
-  iprpcAbout:   '/images/finalui-iprpc-about.png',
-  iprpcNews1:   '/images/finalui-iprpc-news-01.png',
-  iprpcNews3:   '/images/finalui-iprpc-news-03.png',
-  iprpcNews4:   '/images/finalui-iprpc-news-04.png',
-  iprpcNews5:   '/images/finalui-iprpc-news-05.png',
-  iprpcNews7:   '/images/finalui-iprpc-news-07.png',
-  iprpcNews8:   '/images/finalui-iprpc-news-08.png',
-  iprpcNews9:   '/images/finalui-iprpc-news-09.png',
-  iprpcNews10:  '/images/finalui-iprpc-news-10.png',
+  styleGuide:   `${base}images/finalui-style-guide.png`,
+  iprpcHome:    `${base}images/finalui-iprpc-home.png`,
+  iprpcNews2:   `${base}images/finalui-iprpc-news-02.png`,
+  iprpcAbout:   `${base}images/finalui-iprpc-about.png`,
+  iprpcNews1:   `${base}images/finalui-iprpc-news-01.png`,
+  iprpcNews3:   `${base}images/finalui-iprpc-news-03.png`,
+  iprpcNews4:   `${base}images/finalui-iprpc-news-04.png`,
+  iprpcNews5:   `${base}images/finalui-iprpc-news-05.png`,
+  iprpcNews7:   `${base}images/finalui-iprpc-news-07.png`,
+  iprpcNews8:   `${base}images/finalui-iprpc-news-08.png`,
+  iprpcNews9:   `${base}images/finalui-iprpc-news-09.png`,
+  iprpcNews10:  `${base}images/finalui-iprpc-news-10.png`,
 }
 
 // ─── Navigation ────────────────────────────────────────────────────────────
