@@ -12,7 +12,7 @@ import { homeImages } from '../../data/homeData'
 export default function HomeFooter() {
   return (
     <footer
-      className="relative w-full overflow-hidden"
+      className="relative w-full overflow-hidden z-10"
       style={{
         height: 'clamp(80px, 8.5vw, 123px)',
         backgroundImage: `url(${homeImages.footerBg})`,

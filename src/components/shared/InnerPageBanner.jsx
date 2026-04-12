@@ -18,7 +18,7 @@ import { fadeUp } from '../../lib/animations'
 export default function InnerPageBanner({ title, subtitle }) {
   return (
     <section
-      className="relative w-full overflow-hidden flex flex-col items-center"
+      className="relative w-full overflow-hidden flex flex-col items-center z-10"
       style={{ minHeight: 'clamp(320px, 36vw, 518px)' }}
       aria-label={`${title} banner`}
     >

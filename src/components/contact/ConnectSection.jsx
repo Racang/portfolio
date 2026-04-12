@@ -135,8 +135,8 @@ export default function ConnectSection() {
   return (
     <section
       id="connect"
-      className="relative w-full overflow-hidden z-10"
-      style={{ marginTop: 'clamp(-50px, -4.8vw, -69px)' }}
+      className="relative w-full overflow-hidden z-0"
+      style={{ marginTop: 'clamp(-110px, -8.5vw, -120px)' }}
       aria-label="Let's Connect"
     >
       {/* ── Union wave background (absolute, full-width) ── */}
@@ -153,8 +153,8 @@ export default function ConnectSection() {
         className="relative z-10 max-w-[1440px] mx-auto px-8 lg:px-20 flex flex-col items-center"
         style={{
           gap:           'clamp(32px, 3.9vw, 56px)',
-          paddingTop:    'clamp(100px, 9.72vw, 140px)',
-          paddingBottom: 'clamp(80px, 8.33vw, 120px)',
+          paddingTop:    'clamp(150px, 13.2vw, 190px)',
+          paddingBottom: 'clamp(140px, 14vw, 200px)',
         }}
         variants={staggerContainer}
         initial="hidden"

@@ -15,7 +15,7 @@ import ConnectSection   from '../components/contact/ConnectSection'
 
 export default function ContactPage() {
   return (
-    <div className="bg-bg-warm relative overflow-x-hidden">
+    <div className="bg-[#FEFCF1] relative overflow-x-hidden">
       {/* Fixed floating nav — "Contact" NavLink auto-highlights at /contact */}
       <HomeNavbar />
 

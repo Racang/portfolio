@@ -5,7 +5,7 @@
  * Layout:
  *   Left  → Name (Poppins 32px) + Title "Ux/Ui portfolio" (Fredoka 96px cyan, single line) + buttons
  *           heroDecor sparkles anchored to the title's right edge
- *   Right → pink circle (centered) + girl character
+ *   Right → pink circle (centered) + girl character + heroBg squiggle (anchored to image div)
  * Background: #f7f3f3 (bg-warm)
  */
 import { motion } from 'framer-motion'
