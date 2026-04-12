@@ -14,7 +14,7 @@ import ContactPage from './pages/ContactPage'
 
 export default function App() {
   return (
-    <BrowserRouter basename="/Rachaya_Portfolio">
+    <BrowserRouter basename="/portfolio">
       <Routes>
         <Route path="/"                   element={<HomePage />} />
         <Route path="/about"              element={<AboutPage />} />
