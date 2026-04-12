@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   /* Apply variable-font width axis globally for Fredoka */
   .font-fredoka,
   [class*="font-fredoka"] {
@@ -10,8 +14,18 @@
   }
 
   body {
-    background-color: #ffffff;
+    background-color: #f7f3f3;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism helper */
+  .glass {
+    background: linear-gradient(198.6deg, rgba(255,255,255,0.60) 2.68%, rgba(255,255,255,0.40) 95.42%);
+    backdrop-filter: blur(4.95px);
+    -webkit-backdrop-filter: blur(4.95px);
+    border: 1px solid rgba(255,255,255,0.8);
   }
 }
