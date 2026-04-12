@@ -27,18 +27,18 @@ function TimelineRow({ item }) {
   const card = (
     <motion.div
       variants={isLeft ? fadeLeft : fadeRight}
-      className="flex flex-col gap-3 w-full max-w-[430px]"
+      className={`flex flex-col gap-[26px] w-full max-w-[460px] ${isLeft ? 'items-end text-right' : 'items-start text-left'}`}
     >
       {/* Role title */}
       <p
-        className="font-fredoka font-semibold text-coral leading-tight"
-        style={{ fontSize: 'clamp(18px, 1.9vw, 28px)', fontVariationSettings: "'wdth' 100" }}
+        className="font-fredoka font-medium text-coral leading-tight"
+        style={{ fontSize: 'clamp(20px, 2.22vw, 32px)', fontVariationSettings: "'wdth' 100" }}
       >
         {item.role}
         <br />
         at {item.company}
         {item.subsidiary && (
-          <span className="block" style={{ fontSize: 'clamp(14px, 1.3vw, 20px)' }}>
+          <span className="block" style={{ fontSize: 'clamp(16px, 1.94vw, 28px)' }}>
             ({item.subsidiary})
           </span>
         )}
@@ -46,8 +46,8 @@ function TimelineRow({ item }) {
 
       {/* Description */}
       <p
-        className="font-poppins text-grey-400 leading-relaxed"
-        style={{ fontSize: 'clamp(13px, 1vw, 14px)' }}
+        className="font-fredoka font-normal text-grey-700"
+        style={{ fontSize: 'clamp(16px, 1.53vw, 22px)', lineHeight: '1.4', fontVariationSettings: "'wdth' 100" }}
       >
         {item.description}
       </p>
@@ -57,18 +57,16 @@ function TimelineRow({ item }) {
   const yearNode = (
     <motion.div
       variants={scaleIn}
-      className={`flex items-center gap-3 shrink-0 ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}
+      className={`flex items-center gap-[14px] shrink-0 ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}
     >
-      {/* Horizontal connector line */}
-      <div className="w-12 h-px bg-grey-500/40" />
-      {/* Coral dot */}
-      <div className="w-10 h-10 rounded-full bg-coral border-[3px] border-white shadow-pink shrink-0" />
-      {/* Horizontal connector line */}
-      <div className="w-12 h-px bg-grey-500/40" />
+      {/* Coral dot (37px matching Figma Ellipse) */}
+      <div className="w-[37px] h-[37px] rounded-full bg-coral border-[3px] border-white shadow-pink shrink-0" />
+      {/* Horizontal connector — 52px matching Figma Line 1397 */}
+      <div className="w-[52px] h-px bg-grey-500/40" />
       {/* Year label */}
       <p
-        className="font-fredoka font-medium text-grey-800 whitespace-nowrap"
-        style={{ fontSize: 'clamp(16px, 1.8vw, 26px)', fontVariationSettings: "'wdth' 100" }}
+        className="font-fredoka font-medium text-coral whitespace-nowrap"
+        style={{ fontSize: 'clamp(22px, 2.78vw, 40px)', fontVariationSettings: "'wdth' 100" }}
       >
         {item.period}
       </p>
@@ -78,7 +76,7 @@ function TimelineRow({ item }) {
   return (
     <>
       {/* ── DESKTOP layout ─────────────────────────────────────────── */}
-      <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-6">
+      <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] md:items-start md:gap-10 md:px-16">
         {/* Left column */}
         <div className="flex justify-end">
           {isLeft ? card : <div />}
@@ -127,11 +125,11 @@ export default function ExperienceTimeline() {
       }}
       aria-label="Experience"
     >
-      <div className="max-w-[1200px] mx-auto px-8 lg:px-12">
+      <div className="max-w-[1440px] mx-auto px-10">
 
         {/* ── Section heading ──────────────────────────── */}
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-16"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
@@ -149,11 +147,13 @@ export default function ExperienceTimeline() {
           </motion.h2>
           <motion.p
             variants={fadeUp}
-            className="font-fredoka font-medium text-coral"
-            style={{
-              fontSize: 'clamp(22px, 3vw, 44px)',
-              fontVariationSettings: "'wdth' 100",
-            }}
+            className="font-fredoka font-medium text-cyan-accent"
+            style={
+              {
+                fontSize: 'clamp(28px, 3.33vw, 48px)',
+                fontVariationSettings: "'wdth' 100",
+              }
+            }
           >
             Since 2019
           </motion.p>
@@ -188,7 +188,7 @@ export default function ExperienceTimeline() {
 
           {/* ── Entries ──────────────────────────────────────── */}
           <motion.div
-            className="flex flex-col gap-16 md:gap-20 relative z-10"
+            className="flex flex-col gap-20 md:gap-28 relative z-10"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
