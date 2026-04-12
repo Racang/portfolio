@@ -9,7 +9,8 @@ export const homeImages = {
   heroGirl:       `${base}images/Home_Banner_girl.png`,  // a girl 2 character
 
   // About section
-  aboutWave:      `${base}images/BG_Pink02.png`,  // About section full-bleed background
+  aboutWave:      `${base}images/BG_Pink02.png`,  // About section full-bleed background (home page)
+  aboutProfileBg: `${base}images/About_Profile_BG.svg`, // About page profile section BG (cream + wavy bottom)
   aboutProfile:   `${base}images/Home_About_me.png`,
   profileCircle:  `${base}images/Home_Banner_girl_decor.svg`,  // Ellipse 2155 (pink circle bg)
 
