@@ -36,8 +36,8 @@ export default function GenaProcess() {
         </h2>
       </div>
 
-      <div className="w-full max-w-[1262px] flex flex-col gap-[60px] relative mx-auto mt-6">
-        <img alt="" className="max-w-none object-contain size-full" src={genaImages.imgWorkProcess} />
+      <div className="w-full max-w-[980px] flex flex-col relative mx-auto mt-6">
+        <img alt="" className="w-full h-auto object-contain" src={genaImages.imgWorkProcess} />
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ export default function GenaWhatIDid() {
   };
 
   return (
-    <div className="content-center flex flex-wrap max-lg:flex-col gap-[40px] items-center px-[40px] lg:px-[80px] py-[64px] relative shrink-0 w-full z-10">
+    <div className="content-center flex flex-wrap max-lg:flex-col gap-[40px] items-center max-lg:items-start px-[40px] lg:px-[80px] py-[64px] relative shrink-0 w-full z-10">
       <div className="content-stretch flex flex-[1_0_0] max-lg:flex-none max-lg:w-full flex-col gap-[56px] items-start pr-[40px] max-lg:pr-0 relative">
         <div className="content-stretch flex flex-col gap-[24px] items-start max-w-[500px] relative shrink-0 w-full">
           <h2 className="font-fredoka font-semibold text-section-title relative shrink-0 text-[#2E3A59] w-full">
@@ -39,18 +39,16 @@ export default function GenaWhatIDid() {
         ]} />
       </div>
       
-      {/* Main Visuals layout Right */}
-      <div className="flex-[1_0_0] max-lg:flex-none max-lg:w-full max-lg:max-w-[630px] max-lg:mx-auto max-lg:h-auto max-lg:aspect-[625/423] h-[422.871px] max-h-[422.870px] max-w-[625px] relative">
-        <div className="-translate-y-1/2 absolute aspect-[625/423.270] contents left-0 right-[-0.81%] top-[calc(50%+0.2px)]">
-          <div className="-translate-y-1/2 absolute aspect-[606.021/402.870] left-[1.45%] right-[0.65%] top-[calc(50%+0.33px)]">
-            <img alt="" className="absolute block inset-0 max-w-none size-full" height="403.521" src={genaImages.imgImage} width="607" />
-          </div>
-          <div className="-translate-y-1/2 absolute aspect-[624.999/423.27] border border-[rgba(0,0,0,0.2)] border-solid left-0 right-[-0.81%] rounded-[50px] shadow-grey-card top-[calc(50%+0.2px)]" />
-          <div className="-translate-y-1/2 absolute aspect-[625/423.27] left-0 right-[-0.81%] top-[calc(50%+0.2px)]">
-            <div className="absolute inset-[-5.03%_-3.89%_-6.45%_-3.89%]">
-              <img alt="" className="block max-w-none size-full" src={genaImages.imgUnion} />
-            </div>
-          </div>
+      {/* Main Visuals layout Right — rebuilt from Figma node 40000482:23325 */}
+      <div className="flex-[1_0_0] max-lg:flex-none max-lg:w-full max-lg:max-w-[630px] bg-white border border-[#e7e8ed] p-[16px] shadow-grey-card" style={{ borderRadius: 'clamp(24px, 3.3vw, 48px)' }}>
+        <div className="relative w-full overflow-hidden" style={{ aspectRatio: '588 / 441', borderRadius: 'clamp(16px, 2.8vw, 40px)' }}>
+          <img
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            src={genaImages.imgImage}
+          />
+          {/* Inset shadow overlay */}
+          <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_-3px_24.3px_0px_rgba(24,74,234,0.09)]" />
         </div>
       </div>
     </div>
