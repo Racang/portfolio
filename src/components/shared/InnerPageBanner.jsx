@@ -22,8 +22,7 @@ export default function InnerPageBanner({ title, subtitle }) {
       aria-label={`${title} banner`}
     >
       <div 
-        className="w-full bg-[#F7F3F3] flex flex-col items-center justify-start text-center z-10"
-        style={{ paddingTop: '170px', paddingBottom: '30px' }}
+        className="w-full h-[431px] max-[425px]:h-[296px] pt-[98px] max-[425px]:pt-0 bg-[#F7F3F3] flex flex-col items-center justify-center text-center z-10"
       >
         <motion.div
           initial="hidden"
@@ -60,7 +59,7 @@ export default function InnerPageBanner({ title, subtitle }) {
       <div className="w-full relative z-0 -mt-[1px]">
         <svg
           className="w-full h-auto block"
-          viewBox="20 451 1442 85"
+          viewBox="20 451 1442 125"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           overflow="visible"
@@ -75,16 +74,16 @@ export default function InnerPageBanner({ title, subtitle }) {
             <filter
               id="filter0_d_inner_curve"
               x="-20"
-              y="440"
+              y="430"
               width="1500"
-              height="150"
+              height="180"
               filterUnits="userSpaceOnUse"
               colorInterpolationFilters="sRGB"
             >
               <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
               <feOffset dy="10" />
-              <feGaussianBlur stdDeviation="10" />
+              <feGaussianBlur stdDeviation="15" />
               <feComposite in2="hardAlpha" operator="out" />
               <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.47451 0 0 0 0 0.494118 0 0 0 0.3 0" />
               <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_inner_curve" />
