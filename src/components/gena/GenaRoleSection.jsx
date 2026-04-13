@@ -4,7 +4,7 @@ import { genaImages, genaContent } from '../../data/genaData';
 export default function GenaRoleSection({ className }) {
   return (
     <div className="content-stretch flex flex-col items-center overflow-clip px-[40px] lg:px-[213px] py-[37px] relative shrink-0 w-full z-10">
-      <div className={className || "bg-white flex flex-wrap gap-[60px] items-center justify-center px-[40px] py-[36px] relative rounded-[80px] shadow-grey-card shrink-0 max-w-[1014px] w-full"}>
+      <div className={className || "bg-white flex flex-wrap max-[1279px]:flex-col gap-[60px] max-[1279px]:gap-[40px] items-center justify-center px-[40px] py-[36px] relative rounded-[80px] shadow-grey-card shrink-0 max-w-[1014px] w-full"}>
 
         {/* Icon with offset pink background */}
         <div className="flex gap-[10px] items-center relative shrink-0">
@@ -19,8 +19,8 @@ export default function GenaRoleSection({ className }) {
         </div>
 
         {/* Metadata columns */}
-        <div className="content-start flex flex-wrap gap-[48px] items-start relative shrink-0">
-          <div className="flex flex-col gap-[12px] items-start relative min-w-[220px]">
+        <div className="content-start flex flex-wrap max-[1279px]:flex-col gap-[48px] max-[1279px]:gap-[24px] items-start relative shrink-0 max-[1279px]:w-full">
+          <div className="flex flex-col gap-[12px] items-start relative min-w-[220px] max-[1279px]:min-w-0 max-[1279px]:w-full">
             <p className="font-fredoka font-medium leading-none text-cyan-accent text-[20px]">
               Duration:
             </p>
@@ -28,7 +28,7 @@ export default function GenaRoleSection({ className }) {
               {genaContent.role.duration}
             </p>
           </div>
-          <div className="flex flex-col gap-[12px] items-start relative min-w-[220px]">
+          <div className="flex flex-col gap-[12px] items-start relative min-w-[220px] max-[1279px]:min-w-0 max-[1279px]:w-full">
             <p className="font-fredoka font-medium leading-none text-cyan-accent text-[20px]">
               Project
             </p>
@@ -36,7 +36,7 @@ export default function GenaRoleSection({ className }) {
               {genaContent.role.project}
             </p>
           </div>
-          <div className="flex flex-col gap-[12px] items-start relative min-w-[220px]">
+          <div className="flex flex-col gap-[12px] items-start relative min-w-[220px] max-[1279px]:min-w-0 max-[1279px]:w-full">
             <p className="font-fredoka font-medium leading-none text-cyan-accent text-[20px]">
               Role
             </p>
