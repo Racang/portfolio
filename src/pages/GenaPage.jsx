@@ -1,4 +1,6 @@
 import React from 'react';
+// import { motion } from 'framer-motion';
+import { slowFadeUp, customViewport } from '../lib/animations';
 import HomeNavbar from '../components/home/HomeNavbar';
 import HomeFooter from '../components/home/HomeFooter';
 import InnerPageBanner from '../components/shared/InnerPageBanner';
@@ -27,7 +29,10 @@ export default function GenaPage() {
       </div>
 
       {/* 2. Intro section with full width background and curve */}
-      <section aria-label="Project intro" className="relative w-full z-10 bg-[#FEFCF1]">
+      <section 
+        aria-label="Project intro" 
+        className="relative w-full z-10 bg-[#FEFCF1]"
+      >
         <div className="relative z-10 flex flex-col w-full max-w-[1440px] mx-auto pb-[20px] lg:pb-[60px]">
           <GenaRoleSection />
           <GenaWhatIDid />

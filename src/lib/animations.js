@@ -63,4 +63,16 @@ export const floatY = {
 }
 
 /** Common viewport trigger settings */
-export const viewportOnce = { once: true, margin: '-80px' }
+export const viewportOnce = { once: true, margin: '-80px' };
+
+/** Slower Fade-in from below */
+export const slowFadeUp = {
+  hidden: { opacity: 0, y: 60 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.0, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+export const customViewport = { once: true, margin: '-120px' };

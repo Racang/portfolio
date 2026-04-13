@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { slowFadeUp, customViewport } from '../../lib/animations';
 import { genaImages, genaContent } from '../../data/genaData';
 
 export default function GenaRoleSection({ className }) {
@@ -7,7 +9,7 @@ export default function GenaRoleSection({ className }) {
       <div className={className || "bg-white flex flex-wrap max-[1279px]:flex-col gap-[60px] max-[1279px]:gap-[40px] items-center justify-center px-[40px] py-[36px] relative rounded-[80px] shadow-grey-card shrink-0 max-w-[1014px] w-full"}>
 
         {/* Icon with offset pink background */}
-        <div className="flex gap-[10px] items-center relative shrink-0">
+        <motion.div initial="hidden" whileInView="visible" viewport={customViewport} variants={slowFadeUp} className="flex gap-[10px] items-center relative shrink-0">
           <div className="absolute bg-[#ffe8e9] h-[93px] w-[99px] rounded-[18px] left-[-16.5px] top-[-15px]" />
           <div className="relative shrink-0 size-[65px]">
             <img
@@ -16,10 +18,10 @@ export default function GenaRoleSection({ className }) {
               src={genaImages.imgComputer21}
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* Metadata columns */}
-        <div className="content-start flex flex-wrap max-[1279px]:flex-col gap-[48px] max-[1279px]:gap-[24px] items-start relative shrink-0 max-[1279px]:w-full">
+        <motion.div initial="hidden" whileInView="visible" viewport={customViewport} variants={slowFadeUp} className="content-start flex flex-wrap max-[1279px]:flex-col gap-[48px] max-[1279px]:gap-[24px] items-start relative shrink-0 max-[1279px]:w-full">
           <div className="flex flex-col gap-[12px] items-start relative min-w-[220px] max-[1279px]:min-w-0 max-[1279px]:w-full">
             <p className="font-fredoka font-medium leading-none text-cyan-accent text-[20px]">
               Duration:
@@ -44,7 +46,7 @@ export default function GenaRoleSection({ className }) {
               {genaContent.role.role}
             </p>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </div>
