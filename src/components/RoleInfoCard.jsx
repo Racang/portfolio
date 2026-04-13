@@ -1,19 +1,20 @@
 import { images, projectInfo } from '../data/mockData'
+import { genaImages } from '../data/genaData'
 
 /**
  * Reusable stat column used inside the role card.
  */
 function StatColumn({ label, children }) {
   return (
-    <div className="flex flex-col gap-3 flex-1 min-w-[180px]">
+    <div className="flex flex-col gap-[12px] items-start relative min-w-[220px] max-[1279px]:min-w-0 max-[1279px]:w-full">
       <span
-        className="font-fredoka font-medium text-[22px] leading-none text-cyan-accent"
+        className="font-fredoka font-medium text-[20px] leading-none text-cyan-accent"
         style={{ fontVariationSettings: "'wdth' 100" }}
       >
         {label}
       </span>
       <div
-        className="font-fredoka font-normal text-[22px] leading-[1.4] text-grey-700"
+        className="font-fredoka font-normal text-body text-grey-700"
         style={{ fontVariationSettings: "'wdth' 100" }}
       >
         {children}
@@ -23,44 +24,42 @@ function StatColumn({ label, children }) {
 }
 
 /**
- * Role info card — white card with shadow showing project metadata.
- * Matches Figma: rounded-[20px], shadow-grey-card, px-10 py-9, flex-wrap.
+ * Role info card — matches GenaRoleSection card style.
+ * Pill-shaped white card (rounded-[80px]) with shadow, centered, max-w-[1014px].
  */
 export default function RoleInfoCard() {
   return (
     <div
-      className="px-[clamp(16px,14.8vw,213px)] py-[37px]"
+      className="content-stretch flex flex-col items-center overflow-clip px-[40px] lg:px-[213px] py-[37px] relative shrink-0 w-full z-10"
       aria-label="Project information"
     >
-      <div className="bg-white rounded-[20px] shadow-grey-card px-10 py-9 flex flex-wrap items-center gap-6">
-        {/* Logo */}
-        <img
-          src={images.logo}
-          alt="Tostem logo"
-          className="w-[86px] h-[88px] object-contain shrink-0"
-          loading="lazy"
-        />
+      <div className="bg-white flex flex-wrap max-[1279px]:flex-col gap-[60px] max-[1279px]:gap-[40px] items-center justify-center px-[40px] py-[36px] relative rounded-[80px] shadow-grey-card shrink-0 max-w-[1014px] w-full">
 
-        {/* Duration */}
-        <StatColumn label="Duration:">
-          <p>{projectInfo.duration}</p>
-          <p
-            className="text-[16px] leading-[1.3] text-grey-600 mt-1"
-            style={{ fontVariationSettings: "'wdth' 100" }}
-          >
-            {projectInfo.period}
-          </p>
-        </StatColumn>
+        {/* Icon block — exact clone of GenaRoleSection */}
+        <div className="flex gap-[10px] items-center relative shrink-0">
+          <div className="absolute bg-[#ffe8e9] h-[93px] w-[99px] rounded-[18px] left-[-16.5px] top-[-15px]" />
+          <div className="relative shrink-0 size-[65px]">
+            <img
+              alt=""
+              className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+              src={genaImages.imgComputer21}
+            />
+          </div>
+        </div>
 
-        {/* Platform */}
-        <StatColumn label="Platform">
-          <p>{projectInfo.platform}</p>
-        </StatColumn>
-
-        {/* Role */}
-        <StatColumn label="Role">
-          <p>{projectInfo.role}</p>
-        </StatColumn>
+        {/* Metadata columns */}
+        <div className="content-start flex flex-wrap max-[1279px]:flex-col gap-[48px] max-[1279px]:gap-[24px] items-start relative shrink-0 max-[1279px]:w-full">
+          <StatColumn label="Duration:">
+            <p>{projectInfo.duration}</p>
+            <p className="text-body-small text-grey-600 mt-1">{projectInfo.period}</p>
+          </StatColumn>
+          <StatColumn label="Platform">
+            <p>{projectInfo.platform}</p>
+          </StatColumn>
+          <StatColumn label="Role">
+            <p>{projectInfo.role}</p>
+          </StatColumn>
+        </div>
       </div>
     </div>
   )

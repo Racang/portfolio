@@ -7,17 +7,15 @@ import { images, whatIDidItems } from '../data/mockData'
 function BulletLine({ parts }) {
   return (
     <p
-      className="leading-[1.9] font-fredoka font-normal text-[22px] text-grey-700"
+      className="mb-2 text-body font-fredoka font-normal text-grey-700"
       style={{ fontVariationSettings: "'wdth' 100" }}
     >
-      {'• '}
+      <span className="leading-[1.9]">{'· '}</span>
       {parts.map(({ text, highlight }, i) =>
         highlight ? (
-          <span key={i} className="text-cyan-accent">
-            {text}
-          </span>
+          <span key={i} className="font-normal leading-[1.9] text-cyan-accent">{text}</span>
         ) : (
-          <span key={i}>{text}</span>
+          <span key={i} className="leading-[1.9]">{text}</span>
         )
       )}
     </p>
@@ -26,27 +24,25 @@ function BulletLine({ parts }) {
 
 /**
  * "What I did" two-column section.
- * Left: heading + bullet list  |  Right: scrolling UI screenshot preview.
- * Stacks on mobile, side-by-side on lg+.
+ * Matches GenaWhatIDid layout: flex-wrap, flex-[1_0_0], responsive stacking.
  */
 export default function WhatIDid() {
   return (
     <section
-      className="flex flex-wrap items-center gap-10 px-[clamp(16px,5.6vw,80px)] py-16"
+      className="content-center flex flex-wrap gap-[40px] items-center px-[40px] lg:px-[80px] py-[64px] relative shrink-0 w-full z-10"
       aria-labelledby="what-i-did-heading"
     >
       {/* ── Left: text content ─────────────────────────────── */}
-      <div className="flex-1 min-w-[280px] lg:pr-10">
-        <div className="flex flex-col gap-6 max-w-[500px]">
+      <div className="content-stretch flex flex-[1_0_0] flex-col gap-[56px] items-start pr-[40px] relative min-w-[280px]">
+        <div className="content-stretch flex flex-col gap-[24px] items-start max-w-[500px] relative shrink-0 w-full">
           <h2
             id="what-i-did-heading"
-            className="font-fredoka font-semibold text-section-title text-grey-800"
+            className="font-fredoka font-semibold text-section-title relative shrink-0 text-grey-800 w-full"
             style={{ fontVariationSettings: "'wdth' 100" }}
           >
             What I did
           </h2>
-
-          <div>
+          <div className="font-normal relative shrink-0 text-grey-700 w-full" style={{ fontVariationSettings: "'wdth' 100" }}>
             {whatIDidItems.map((item, i) => (
               <BulletLine key={i} parts={item.parts} />
             ))}
@@ -55,24 +51,15 @@ export default function WhatIDid() {
       </div>
 
       {/* ── Right: cropped UI screenshot ───────────────────── */}
-      {/*
-        The container is a fixed-height viewport into the full-page screenshot.
-        overflow-hidden clips the tall image to show only the top portion,
-        replicating the Figma scroll preview effect (h ≈ 671px, img natural height ≈ 2090px).
-      */}
+      {/* Mobile: natural h-auto; Desktop: fixed-height crop showing top of page */}
       <div
-        className="
-          relative rounded-[12px] shadow-card-dark overflow-hidden shrink-0
-          w-full sm:w-[585px]
-          h-[360px] sm:h-[520px] lg:h-[671px]
-        "
+        className="relative rounded-[24px] shadow-card-dark overflow-hidden w-full max-w-[625px] h-auto lg:h-[671px]"
         aria-label="UI Homepage screenshot preview"
       >
         <img
           src={images.uiHomepage1}
           alt="Tostem website homepage UI"
-          className="absolute top-0 left-0 w-full"
-          style={{ height: 'auto', minHeight: '100%' }}
+          className="w-full h-auto block lg:absolute lg:top-0 lg:left-0"
           loading="lazy"
         />
       </div>

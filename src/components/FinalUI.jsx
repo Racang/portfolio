@@ -2,7 +2,6 @@ import { images, finalUIScreens } from '../data/mockData'
 
 /**
  * Reusable screenshot card used in the Phase I grid.
- * Accepts an aspect-ratio utility class so each screen can have its own ratio.
  */
 function ScreenCard({ src, alt, aspectClass = 'aspect-video' }) {
   return (
@@ -19,36 +18,34 @@ function ScreenCard({ src, alt, aspectClass = 'aspect-video' }) {
 
 /**
  * Phase I Final UI section.
- * — Title, Thai-language subtitle.
- * — Style guide (2:1 ratio), home page (16:9), then 11 × 16:9 news/about screens.
- * All cards: rounded-[24px], stacked vertically with 40px gap.
+ * Matches Gena section spacing: px-[40px] lg:px-[80px] py-[64px].
  */
 export default function FinalUI() {
   return (
     <section
-      className="flex flex-col gap-[30px] pb-16 pt-20"
+      className="content-stretch flex flex-col gap-[44px] items-center px-[40px] lg:px-[80px] py-[64px] relative shrink-0 w-full z-10"
       aria-labelledby="final-ui-heading"
     >
       {/* ── Header ─────────────────────────────────────────── */}
-      <div className="flex flex-col gap-6 items-center px-[clamp(16px,5.6vw,80px)] text-grey-800 text-center">
+      <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 text-grey-800 w-full max-w-[798px] text-center">
         <h2
           id="final-ui-heading"
           className="font-fredoka font-semibold text-section-title w-full"
           style={{ fontVariationSettings: "'wdth' 100" }}
         >
-          PhaseI Final UI
+          Phase I Final UI
         </h2>
         <p
-          className="font-fredoka font-normal text-body w-full"
+          className="font-normal text-body w-full text-grey-700"
           style={{ fontVariationSettings: "'wdth' 100" }}
         >
-          การDesign feature หนึ่งจะเริ่มต้นจากรับfeatureหนึ่งจากBu team
-          ในCaseนี้จะยกตัวอย่างFeature Gardrail
+          การ Design feature หนึ่งจะเริ่มต้นจากรับ feature หนึ่งจาก Bu team
+          ในCase นี้จะยกตัวอย่าง Feature Gardrail
         </p>
       </div>
 
       {/* ── Screenshots ────────────────────────────────────── */}
-      <div className="flex flex-col gap-10 px-[clamp(16px,5.6vw,80px)]">
+      <div className="flex flex-col gap-[40px] w-full">
         {finalUIScreens.map(({ key, alt, aspectClass }) => (
           <ScreenCard
             key={key}

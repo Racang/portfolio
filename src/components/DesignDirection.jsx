@@ -2,7 +2,7 @@ import { images } from '../data/mockData'
 
 /**
  * Three Figma design-direction explorations, each rendered as a tall
- * card matching Figma's rounded-[8px] shadow-grey-card treatment.
+ * card matching Gena challenge card style: rounded-[20px], shadow-grey-card, bg-white.
  * On desktop they sit side-by-side; on mobile they stack.
  */
 const directions = [
@@ -26,32 +26,32 @@ const directions = [
 export default function DesignDirection() {
   return (
     <section
-      className="flex flex-col gap-11 items-center px-[clamp(16px,5.6vw,80px)] py-[80px]"
+      className="content-stretch flex flex-col gap-[44px] items-center px-[40px] lg:px-[190px] py-[64px] relative shrink-0 w-full z-10"
       aria-labelledby="design-direction-heading"
     >
       {/* ── Header ────────────────────────────────────────── */}
-      <div className="flex flex-col gap-6 items-center text-grey-800 max-w-[798px] text-center">
+      <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 text-grey-800 w-full max-w-[798px] text-center">
         <h2
           id="design-direction-heading"
           className="font-fredoka font-semibold text-section-title w-full"
           style={{ fontVariationSettings: "'wdth' 100" }}
         >
-          Design Direction 
+          Design Direction
         </h2>
         <p
-          className="font-fredoka font-normal text-body w-full"
+          className="font-normal text-body w-full text-grey-700"
           style={{ fontVariationSettings: "'wdth' 100" }}
         >
-          Designing GENA, an Enterprise AI platform, presented several unique challenges.
+          Designing the Tostem cooperate website presented several unique design direction explorations.
         </p>
       </div>
 
       {/* ── Direction image grid ───────────────────────────── */}
-      <div className="flex flex-wrap gap-x-10 gap-y-8 items-start w-full">
+      <div className="content-start flex flex-wrap gap-[30px] items-stretch justify-center relative shrink-0 w-full">
         {directions.map(({ src, alt, label }) => (
           <div
             key={label}
-            className="flex-1 min-w-[240px] rounded-[8px] shadow-grey-card overflow-hidden"
+            className="bg-white flex-[1_0_0] min-w-[240px] max-w-[530px] rounded-[20px] shadow-grey-card overflow-hidden"
           >
             <img
               src={src}
