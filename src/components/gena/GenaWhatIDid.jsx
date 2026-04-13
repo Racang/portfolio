@@ -14,8 +14,8 @@ export default function GenaWhatIDid() {
   };
 
   return (
-    <div className="content-center flex flex-wrap gap-[40px] items-center px-[40px] lg:px-[80px] py-[64px] relative shrink-0 w-full z-10">
-      <div className="content-stretch flex flex-[1_0_0] flex-col gap-[56px] items-start pr-[40px] relative">
+    <div className="content-center flex flex-wrap max-lg:flex-col gap-[40px] items-center px-[40px] lg:px-[80px] py-[64px] relative shrink-0 w-full z-10">
+      <div className="content-stretch flex flex-[1_0_0] max-lg:flex-none max-lg:w-full flex-col gap-[56px] items-start pr-[40px] max-lg:pr-0 relative">
         <div className="content-stretch flex flex-col gap-[24px] items-start max-w-[500px] relative shrink-0 w-full">
           <h2 className="font-fredoka font-semibold text-section-title relative shrink-0 text-[#2E3A59] w-full">
             {genaContent.whatIDid.title}
@@ -40,7 +40,7 @@ export default function GenaWhatIDid() {
       </div>
       
       {/* Main Visuals layout Right */}
-      <div className="flex-[1_0_0] h-[422.871px] max-h-[422.870px] max-w-[625px] relative">
+      <div className="flex-[1_0_0] max-lg:flex-none max-lg:w-full max-lg:max-w-[630px] max-lg:mx-auto max-lg:h-auto max-lg:aspect-[625/423] h-[422.871px] max-h-[422.870px] max-w-[625px] relative">
         <div className="-translate-y-1/2 absolute aspect-[625/423.270] contents left-0 right-[-0.81%] top-[calc(50%+0.2px)]">
           <div className="-translate-y-1/2 absolute aspect-[606.021/402.870] left-[1.45%] right-[0.65%] top-[calc(50%+0.33px)]">
             <img alt="" className="absolute block inset-0 max-w-none size-full" height="403.521" src={genaImages.imgImage} width="607" />
