@@ -8,7 +8,6 @@ export default {
     extend: {
       fontFamily: {
         fredoka: ['Fredoka', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
       },
       colors: {
         'grey-800': '#3E446B',

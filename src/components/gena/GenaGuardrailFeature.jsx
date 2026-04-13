@@ -7,8 +7,8 @@ export default function GenaGuardrailFeature() {
       
       {/* Design Guardrail Feature Details */}
       <div className="content-stretch flex flex-col gap-[24px] items-center text-grey-800 text-center w-full max-w-[798px]">
-        <p className="font-semibold text-[60px] leading-[1.1]">{genaContent.guardrail.title}</p>
-        <p className="font-normal text-[22px] text-grey-700 leading-[1.4]">
+        <h2 className="font-fredoka font-semibold text-section-title">{genaContent.guardrail.title}</h2>
+        <p className="font-normal text-body text-grey-700">
           {genaContent.guardrail.desc}
         </p>
       </div>
@@ -29,8 +29,8 @@ export default function GenaGuardrailFeature() {
            </div>
          </div>
          <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-start">
-           <p className="font-semibold text-[48px] text-grey-800">{genaContent.guardrail.competitor.title}</p>
-           <p className="font-normal text-[22px] text-grey-400 leading-[1.4]">
+           <h3 className="font-fredoka font-semibold text-subsection-title text-grey-800">{genaContent.guardrail.competitor.title}</h3>
+           <p className="font-normal text-body text-grey-400">
              {genaContent.guardrail.competitor.desc}
            </p>
          </div>
@@ -38,7 +38,7 @@ export default function GenaGuardrailFeature() {
 
       {/* User Interface Design Sub-section */}
       <div className="w-full flex flex-col items-center mt-[80px] gap-[40px]">
-        <p className="font-semibold text-[48px] text-grey-800">{genaContent.guardrail.uiDesign.title}</p>
+        <h3 className="font-fredoka font-semibold text-subsection-title text-grey-800">{genaContent.guardrail.uiDesign.title}</h3>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px] lg:gap-[48px] w-full">
           <div className="flex flex-col gap-4">
@@ -47,7 +47,7 @@ export default function GenaGuardrailFeature() {
                 <img src={genaImages.imgRectangle82744} alt="" className="absolute inset-0 max-w-none object-contain size-full" />
               </div>
             </div>
-            <p className="text-[22px] text-grey-800 leading-[1.4]">
+            <p className="text-body text-grey-800">
               {genaContent.guardrail.uiDesign.items[0]}
             </p>
           </div>
@@ -57,7 +57,7 @@ export default function GenaGuardrailFeature() {
                 <img src={genaImages.imgRectangle82745} alt="" className="absolute h-[117%] left-[-4.69%] max-w-none top-[-3.69%] w-[148.77%]" />
               </div>
             </div>
-            <p className="text-[22px] text-grey-800 leading-[1.4]">
+            <p className="text-body text-grey-800">
               {genaContent.guardrail.uiDesign.items[1]}
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function GenaGuardrailFeature() {
                 <img src={genaImages.imgRectangle82746} alt="" className="absolute h-[83.89%] left-[-2.96%] max-w-none top-[12.83%] w-[112.85%]" />
               </div>
             </div>
-            <p className="text-[22px] text-grey-800 leading-[1.4]">
+            <p className="text-body text-grey-800">
               {genaContent.guardrail.uiDesign.items[2]}
             </p>
           </div>
@@ -76,7 +76,7 @@ export default function GenaGuardrailFeature() {
       
       {/* Handover to Developer Section */}
       <div className="w-full flex flex-col items-center mt-[80px] gap-[40px]">
-        <p className="font-semibold text-[48px] text-grey-800">{genaContent.guardrail.handover.title}</p>
+        <h3 className="font-fredoka font-semibold text-subsection-title text-grey-800">{genaContent.guardrail.handover.title}</h3>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[30px] lg:gap-[48px] w-full">
           <div className="flex flex-col gap-4">
@@ -85,7 +85,7 @@ export default function GenaGuardrailFeature() {
                 <img src={genaImages.imgRectangle82747} alt="" className="absolute h-full left-[0.05%] max-w-none top-[-0.15%] w-[128.38%]" />
               </div>
             </div>
-            <p className="text-[22px] text-grey-800 leading-[1.4]">
+            <p className="text-body text-grey-800">
               {genaContent.guardrail.handover.items[0]}
             </p>
           </div>
@@ -98,7 +98,7 @@ export default function GenaGuardrailFeature() {
                 </div>
               </div>
             </div>
-            <p className="text-[22px] text-grey-800 leading-[1.4]">
+            <p className="text-body text-grey-800">
               {genaContent.guardrail.handover.items[1]}
             </p>
           </div>
@@ -108,7 +108,7 @@ export default function GenaGuardrailFeature() {
                 <img src={genaImages.imgRectangle82749} alt="" className="absolute h-full left-[-4.23%] max-w-none top-[-0.11%] w-[137.12%]" />
               </div>
             </div>
-            <p className="text-[22px] text-grey-800 leading-[1.4]">
+            <p className="text-body text-grey-800">
               {genaContent.guardrail.handover.items[2]}
             </p>
           </div>
@@ -117,7 +117,7 @@ export default function GenaGuardrailFeature() {
 
       {/* Feedback loop */}
       <div className="w-full flex flex-col items-center mt-[80px] gap-[40px] pb-[80px]">
-        <p className="font-semibold text-[48px] text-grey-800 text-center">{genaContent.guardrail.feedback.title}</p>
+        <h3 className="font-fredoka font-semibold text-subsection-title text-grey-800 text-center">{genaContent.guardrail.feedback.title}</h3>
         
         <div className="flex flex-col lg:flex-row gap-[40px] items-center w-full">
           <div className="flex items-center gap-[16px] shrink-0 justify-center flex-wrap lg:flex-nowrap">
@@ -133,7 +133,7 @@ export default function GenaGuardrailFeature() {
                </div>
             </div>
           </div>
-          <p className="font-normal text-[22px] text-grey-700 leading-[1.5]">
+          <p className="font-normal text-body text-grey-700">
             {genaContent.guardrail.feedback.desc}
           </p>
         </div>

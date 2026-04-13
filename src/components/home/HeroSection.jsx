@@ -3,7 +3,7 @@
  *
  * Figma reference: root layer (node 40000150:29722)
  * Layout:
- *   Left  → Name (Poppins 32px) + Title "Ux/Ui portfolio" (Fredoka 96px cyan, single line) + buttons
+ *   Left  → Name (Fredoka 32px) + Title "Ux/Ui portfolio" (Fredoka 96px cyan, single line) + buttons
  *           heroDecor sparkles anchored to the title's right edge
  *   Right → pink circle (centered) + girl character + heroBg squiggle (anchored to image div)
  * Background: #f7f3f3 (bg-warm)
@@ -36,7 +36,7 @@ export default function HeroSection() {
           {/* Name */}
           <motion.p
             variants={fadeLeft}
-            className="font-poppins text-grey-800 leading-none"
+            className="font-fredoka text-grey-800 leading-none"
             style={{ fontSize: 'clamp(20px, 2.2vw, 32px)' }}
           >
             Rachaya Angkanawin

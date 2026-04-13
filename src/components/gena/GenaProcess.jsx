@@ -31,9 +31,9 @@ export default function GenaProcess() {
   return (
     <div className="content-stretch flex flex-col gap-[44px] items-center p-[40px] lg:p-[80px] relative shrink-0 w-full z-10 bg-white">
       <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 text-[#3e446b] w-full max-w-[798px]">
-        <p className="font-semibold leading-none relative shrink-0 text-[60px] text-center w-full" style={{ fontVariationSettings: "'wdth' 100" }}>
+        <h2 className="font-fredoka font-semibold text-section-title relative shrink-0 text-center w-full" style={{ fontVariationSettings: "'wdth' 100" }}>
           Work Process
-        </p>
+        </h2>
       </div>
 
       <div className="w-full max-w-[1262px] flex flex-col gap-[60px] relative mx-auto mt-6">

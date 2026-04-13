@@ -72,8 +72,7 @@ export default function AboutContactStrip() {
 
         <motion.p
           variants={fadeUp}
-          className="font-poppins text-grey-400 mb-8"
-          style={{ fontSize: 'clamp(14px, 1.3vw, 18px)' }}
+          className="font-fredoka text-grey-400 mb-8 text-body"
         >
           I'd love to hear about your project.{' '}
           <a

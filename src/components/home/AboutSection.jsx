@@ -83,17 +83,13 @@ export default function AboutSection() {
           className="flex flex-col gap-6 flex-1 min-w-0"
         >
           <h2
-            className="font-fredoka font-semibold text-grey-800 leading-none"
-            style={{
-              fontSize: 'clamp(36px, 4.2vw, 60px)',
-              fontVariationSettings: "'wdth' 100",
-            }}
+            className="font-fredoka font-semibold text-grey-800 text-section-title"
+            style={{ fontVariationSettings: "'wdth' 100" }}
           >
             Hello there! I'm Toey.
           </h2>
           <p
-            className="font-poppins text-grey-400 leading-relaxed"
-            style={{ fontSize: 'clamp(16px, 1.5vw, 22px)' }}
+            className="font-fredoka text-grey-400 text-body"
           >
             I'm a UX/UI Designer with over 6 years of experience in designing web applications
             and websites. I'm passionate about design and specialize in transforming complex

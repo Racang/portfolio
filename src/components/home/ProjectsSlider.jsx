@@ -129,8 +129,8 @@ export default function ProjectsSlider() {
 
         {/* ── Heading ──────────────────────────────────────────── */}
         <motion.h2
-          className="font-fredoka font-semibold text-grey-800 text-center mb-12"
-          style={{ fontSize: 'clamp(36px, 4.2vw, 60px)', fontVariationSettings: "'wdth' 100" }}
+          className="font-fredoka font-semibold text-grey-800 text-center mb-12 text-section-title"
+          style={{ fontVariationSettings: "'wdth' 100" }}
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"

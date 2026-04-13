@@ -5,7 +5,7 @@ export default function GenaBrandDesign() {
   return (
     <div className="content-stretch flex flex-col gap-[44px] items-center p-[40px] lg:p-[80px] relative shrink-0 w-full z-10">
       <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 text-grey-800 w-full max-w-[798px]">
-        <p className="font-semibold leading-none relative shrink-0 text-[60px] text-center w-full" style={{ fontVariationSettings: "'wdth' 100" }}>{genaContent.brandDesign.title}</p>
+        <h2 className="font-fredoka font-semibold text-section-title relative shrink-0 text-center w-full" style={{ fontVariationSettings: "'wdth' 100" }}>{genaContent.brandDesign.title}</h2>
       </div>
       
       <div className="content-start flex flex-wrap gap-[30px] lg:gap-[48px] items-start relative shrink-0 w-full">
@@ -17,9 +17,9 @@ export default function GenaBrandDesign() {
             </div>
           </div>
           <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start mt-2">
-            <p className="font-medium leading-[1.2] text-grey-800 text-[32px]" style={{ fontVariationSettings: "'wdth' 100" }}>{genaContent.brandDesign.boxes[0].title}</p>
-            <div className="font-normal text-grey-700 text-[20px]">
-              <p className="leading-[1.4] mb-0">{genaContent.brandDesign.boxes[0].desc}</p>
+            <h3 className="font-fredoka font-medium text-card-title text-grey-800" style={{ fontVariationSettings: "'wdth' 100" }}>{genaContent.brandDesign.boxes[0].title}</h3>
+            <div className="font-normal text-grey-700">
+              <p className="text-body mb-0">{genaContent.brandDesign.boxes[0].desc}</p>
             </div>
           </div>
         </div>
@@ -35,9 +35,9 @@ export default function GenaBrandDesign() {
             </div>
           </div>
           <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start mt-2">
-            <p className="font-medium leading-[1.2] text-grey-800 text-[32px]" style={{ fontVariationSettings: "'wdth' 100" }}>{genaContent.brandDesign.boxes[1].title}</p>
-            <div className="font-normal text-grey-700 text-[20px]">
-              <p className="leading-[1.4] mb-0">{genaContent.brandDesign.boxes[1].desc}</p>
+            <h3 className="font-fredoka font-medium text-card-title text-grey-800" style={{ fontVariationSettings: "'wdth' 100" }}>{genaContent.brandDesign.boxes[1].title}</h3>
+            <div className="font-normal text-grey-700">
+              <p className="text-body mb-0">{genaContent.brandDesign.boxes[1].desc}</p>
             </div>
           </div>
         </div>
@@ -53,9 +53,9 @@ export default function GenaBrandDesign() {
             </div>
           </div>
           <div className="content-stretch flex flex-[1_0_0] flex-col gap-[10px] items-start mt-2">
-            <p className="font-medium leading-[1.2] text-grey-800 text-[32px]" style={{ fontVariationSettings: "'wdth' 100" }}>{genaContent.brandDesign.boxes[2].title}</p>
-            <div className="font-normal text-grey-700 text-[20px]">
-              <p className="leading-[1.4] mb-0">{genaContent.brandDesign.boxes[2].desc}</p>
+            <h3 className="font-fredoka font-medium text-card-title text-grey-800" style={{ fontVariationSettings: "'wdth' 100" }}>{genaContent.brandDesign.boxes[2].title}</h3>
+            <div className="font-normal text-grey-700">
+              <p className="text-body mb-0">{genaContent.brandDesign.boxes[2].desc}</p>
             </div>
           </div>
         </div>

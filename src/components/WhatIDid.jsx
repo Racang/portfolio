@@ -40,11 +40,8 @@ export default function WhatIDid() {
         <div className="flex flex-col gap-6 max-w-[500px]">
           <h2
             id="what-i-did-heading"
-            className="font-fredoka font-semibold leading-none text-grey-800"
-            style={{
-              fontSize: 'clamp(36px, 4.2vw, 60px)',
-              fontVariationSettings: "'wdth' 100",
-            }}
+            className="font-fredoka font-semibold text-section-title text-grey-800"
+            style={{ fontVariationSettings: "'wdth' 100" }}
           >
             What I did
           </h2>

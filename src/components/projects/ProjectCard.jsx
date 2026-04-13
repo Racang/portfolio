@@ -67,10 +67,8 @@ export default function ProjectCard({ project, index = 0 }) {
 
           {/* Description — fixed 3-line overflow to match Figma h-[84px] */}
           <p
-            className="font-fredoka font-normal text-grey-700 overflow-hidden"
+            className="font-fredoka font-normal text-grey-700 overflow-hidden text-body"
             style={{
-              fontSize: 'clamp(15px, 1.39vw, 20px)',
-              lineHeight: 1.3,
               display: '-webkit-box',
               WebkitLineClamp: 3,
               WebkitBoxOrient: 'vertical',

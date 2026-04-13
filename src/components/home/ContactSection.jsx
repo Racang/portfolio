@@ -92,11 +92,8 @@ export default function ContactSection() {
         {/* Heading */}
         <motion.h2
           variants={fadeUp}
-          className="font-fredoka font-semibold text-grey-800 text-center mb-10"
-          style={{
-            fontSize: 'clamp(36px, 4.2vw, 60px)',
-            fontVariationSettings: "'wdth' 100",
-          }}
+          className="font-fredoka font-semibold text-grey-800 text-center mb-10 text-section-title"
+          style={{ fontVariationSettings: "'wdth' 100" }}
         >
           Let's Connect
         </motion.h2>

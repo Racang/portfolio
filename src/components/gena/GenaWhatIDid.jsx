@@ -16,12 +16,12 @@ export default function GenaWhatIDid() {
     <div className="content-center flex flex-wrap gap-[40px] items-center px-[40px] lg:px-[80px] py-[64px] relative shrink-0 w-full z-10">
       <div className="content-stretch flex flex-[1_0_0] flex-col gap-[56px] items-start pr-[40px] relative">
         <div className="content-stretch flex flex-col gap-[24px] items-start max-w-[500px] relative shrink-0 w-full">
-          <p className="font-bold leading-none relative shrink-0 text-[#2E3A59] text-[60px] w-full" style={{ fontVariationSettings: "'wdth' 100" }}>
+          <h2 className="font-fredoka font-semibold text-section-title relative shrink-0 text-[#2E3A59] w-full">
             {genaContent.whatIDid.title}
-          </p>
+          </h2>
           <div className="font-normal relative shrink-0 text-grey-700 w-full" style={{ fontVariationSettings: "'wdth' 100" }}>
             {genaContent.whatIDid.bullets.map((bullet, i) => (
-              <p key={i} className="mb-2 text-[18px]">
+              <p key={i} className="mb-2 text-body">
                 <span className="leading-[1.9]">{'· '}</span>
                 {renderBullet(bullet)}
               </p>

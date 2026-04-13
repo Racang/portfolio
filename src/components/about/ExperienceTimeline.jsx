@@ -10,7 +10,7 @@
  *       side='left'  → card on LEFT  | coral dot + horizontal line + year on RIGHT
  *       side='right' → year + horizontal line + coral dot on LEFT | card on RIGHT
  *   - Job title in coral (Fredoka semibold), "(Gable Subsidiary)" in smaller coral
- *   - Description in Poppins regular grey-400
+ *   - Description in Fredoka regular grey-400
  *   - Responsive: single column on mobile with left-rail dot + line
  */
 import { motion } from 'framer-motion'
@@ -46,8 +46,8 @@ function TimelineRow({ item }) {
 
       {/* Description */}
       <p
-        className="font-fredoka font-normal text-grey-700"
-        style={{ fontSize: 'clamp(16px, 1.53vw, 22px)', lineHeight: '1.4', fontVariationSettings: "'wdth' 100" }}
+        className="font-fredoka font-normal text-grey-700 text-body"
+        style={{ fontVariationSettings: "'wdth' 100" }}
       >
         {item.description}
       </p>
@@ -137,11 +137,8 @@ export default function ExperienceTimeline() {
         >
           <motion.h2
             variants={fadeUp}
-            className="font-fredoka font-semibold text-grey-800 leading-tight"
-            style={{
-              fontSize: 'clamp(36px, 4.2vw, 60px)',
-              fontVariationSettings: "'wdth' 100",
-            }}
+            className="font-fredoka font-semibold text-grey-800 text-section-title"
+            style={{ fontVariationSettings: "'wdth' 100" }}
           >
             My Experience
           </motion.h2>

@@ -20,6 +20,52 @@
   }
 }
 
+@layer components {
+  /*
+   * Shared body text token — single source of truth for paragraph typography.
+   * font-size and line-height are set here; Tailwind utilities (text-[Npx],
+   * leading-*) and inline styles always win, so explicit overrides are safe.
+   * font-family is intentionally declared here but will be superseded by
+   * font-fredoka utility class when present on the element.
+   */
+  .text-body {
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(16px, 1.4vw, 20px);
+    line-height: 1.6;
+  }
+
+  /* Body Text Small token — captions, secondary descriptions, helper text.
+     Apply via className="text-body-small" wherever a smaller body variant is needed. */
+  .text-body-small {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  /* ── Heading scale — shared site-wide, matches Home page clamp values ────── */
+
+  /* Section title: H2-level section headings (e.g. "Hello there!", "My Projects") */
+  .text-section-title {
+    font-size: clamp(36px, 4.2vw, 60px);
+    line-height: 1;
+  }
+
+  /* Sub-section title: grouped feature headings below section level */
+  .text-subsection-title {
+    font-size: clamp(28px, 3.3vw, 48px);
+    line-height: 1.1;
+  }
+
+  /* Card title: process cards, showcase cards, brand exploration cards, UI concept cards.
+     font-weight is baked in so future updates require only this one rule. */
+  .text-card-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+}
+
 @layer utilities {
   /* Glassmorphism helper */
   .glass {

@@ -5,8 +5,8 @@ export default function GenaApplyBrand() {
   return (
     <div className="w-full mx-auto max-w-[1440px] px-[40px] lg:px-[80px] py-[80px] flex flex-col items-center gap-[44px] z-10 relative">
       <div className="text-center w-full max-w-[798px]">
-        <p className="font-semibold text-[60px] text-grey-800">{genaContent.applyBrand.title}</p>
-        <p className="font-normal text-[22px] text-grey-700 mt-4">
+        <h2 className="font-fredoka font-semibold text-section-title text-grey-800">{genaContent.applyBrand.title}</h2>
+        <p className="font-normal text-body text-grey-700 mt-4">
           {genaContent.applyBrand.subtitle}
         </p>
       </div>
@@ -21,7 +21,7 @@ export default function GenaApplyBrand() {
             </div>
           </div>
         </div>
-        <p className="font-normal text-[22px] text-grey-400 leading-[1.5] w-full lg:w-1/2 mt-4 lg:mt-0">
+        <p className="font-normal text-body text-grey-400 w-full lg:w-1/2 mt-4 lg:mt-0">
            {genaContent.applyBrand.desc}
         </p>
       </div>

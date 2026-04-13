@@ -33,20 +33,14 @@ export default function FinalUI() {
       <div className="flex flex-col gap-6 items-center px-[clamp(16px,5.6vw,80px)] text-grey-800 text-center">
         <h2
           id="final-ui-heading"
-          className="font-fredoka font-semibold leading-none w-full"
-          style={{
-            fontSize: 'clamp(36px, 4.2vw, 60px)',
-            fontVariationSettings: "'wdth' 100",
-          }}
+          className="font-fredoka font-semibold text-section-title w-full"
+          style={{ fontVariationSettings: "'wdth' 100" }}
         >
           PhaseI Final UI
         </h2>
         <p
-          className="font-fredoka font-normal leading-[1.4] text-[22px] w-full"
-          style={{
-            fontFamily: "'Fredoka', 'Noto Sans Thai', sans-serif",
-            fontVariationSettings: "'wdth' 100",
-          }}
+          className="font-fredoka font-normal text-body w-full"
+          style={{ fontVariationSettings: "'wdth' 100" }}
         >
           การDesign feature หนึ่งจะเริ่มต้นจากรับfeatureหนึ่งจากBu team
           ในCaseนี้จะยกตัวอย่างFeature Gardrail

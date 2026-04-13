@@ -10,10 +10,10 @@ export default function GenaBackground() {
         </div>
       </div>
       <div className="content-stretch flex flex-[1_0_0] flex-col gap-[24px] items-start min-h-px min-w-[500px] relative">
-        <p className="font-semibold leading-none relative shrink-0 text-grey-800 text-[60px] w-full" style={{ fontVariationSettings: "'wdth' 100" }}>
+        <h2 className="font-fredoka font-semibold text-section-title relative shrink-0 text-grey-800 w-full" style={{ fontVariationSettings: "'wdth' 100" }}>
           Background
-        </p>
-        <p className="font-normal leading-[1.4] relative shrink-0 text-grey-400 text-[22px] w-full" style={{ fontVariationSettings: "'wdth' 100" }}>
+        </h2>
+        <p className="font-normal text-body relative shrink-0 text-grey-400 w-full" style={{ fontVariationSettings: "'wdth' 100" }}>
           GENA (Genarative AI for Enterprise Assistant) is an enterprise AI platform designed to help organizations integrate genarative AI into their workflows in a secure and scalable way. The platform enables teams to create and manage AI assistants, connect with internal tools and data, and streamline various business processes through a centralized system.
         </p>
       </div>

@@ -33,16 +33,13 @@ export default function DesignDirection() {
       <div className="flex flex-col gap-6 items-center text-grey-800 max-w-[798px] text-center">
         <h2
           id="design-direction-heading"
-          className="font-fredoka font-semibold leading-none w-full"
-          style={{
-            fontSize: 'clamp(36px, 4.2vw, 60px)',
-            fontVariationSettings: "'wdth' 100",
-          }}
+          className="font-fredoka font-semibold text-section-title w-full"
+          style={{ fontVariationSettings: "'wdth' 100" }}
         >
           Design Direction 
         </h2>
         <p
-          className="font-fredoka font-normal leading-[1.4] text-[22px] w-full"
+          className="font-fredoka font-normal text-body w-full"
           style={{ fontVariationSettings: "'wdth' 100" }}
         >
           Designing GENA, an Enterprise AI platform, presented several unique challenges.
