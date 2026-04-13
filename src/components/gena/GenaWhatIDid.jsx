@@ -1,5 +1,6 @@
 import React from 'react';
 import { genaImages, genaContent } from '../../data/genaData';
+import ProcessSteps from '../shared/ProcessSteps';
 
 export default function GenaWhatIDid() {
   const renderBullet = (text) => {
@@ -30,30 +31,12 @@ export default function GenaWhatIDid() {
         </div>
         
         {/* Visual Process Setup */}
-        <div className="content-start flex flex-wrap gap-y-[10px] items-start relative shrink-0 w-full mt-4">
-          <div className="flex flex-[1_0_0] items-center justify-center min-h-px min-w-px relative">
-            <div className="flex-none w-full">
-              <div className="content-center flex flex-wrap gap-[43px] items-start relative w-full">
-                <div className="content-stretch flex flex-col gap-[20px] items-center relative shrink-0">
-                  <p className="font-medium leading-none text-grey-700 text-[16px]" style={{ fontVariationSettings: "'wdth' 100" }}>{genaContent.whatIDid.process[0]}</p>
-                  <img alt="" className="size-[40px] object-cover" src={genaImages.imgSearch1} />
-                </div>
-                <div className="content-stretch flex flex-col gap-[20px] items-center relative shrink-0">
-                  <p className="font-medium leading-none text-grey-700 text-[16px]" style={{ fontVariationSettings: "'wdth' 100" }}>{genaContent.whatIDid.process[1]}</p>
-                  <img alt="" className="size-[40px] object-cover" src={genaImages.imgContract1} />
-                </div>
-                <div className="content-stretch flex flex-col gap-[20px] items-center relative shrink-0">
-                  <p className="font-medium leading-none text-grey-700 text-[16px]" style={{ fontVariationSettings: "'wdth' 100" }}>{genaContent.whatIDid.process[2]}</p>
-                  <img alt="" className="size-[40px] object-cover" src={genaImages.imgPaint1} />
-                </div>
-                <div className="content-stretch flex flex-col gap-[20px] items-center relative shrink-0">
-                  <p className="font-medium leading-none text-grey-700 text-[16px]" style={{ fontVariationSettings: "'wdth' 100" }}>{genaContent.whatIDid.process[3]}</p>
-                  <img alt="" className="size-[40px] object-cover" src={genaImages.imgComputer11} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ProcessSteps steps={[
+          { label: genaContent.whatIDid.process[0], src: genaImages.imgSearch1 },
+          { label: genaContent.whatIDid.process[1], src: genaImages.imgContract1 },
+          { label: genaContent.whatIDid.process[2], src: genaImages.imgPaint1 },
+          { label: genaContent.whatIDid.process[3], src: genaImages.imgComputer11 },
+        ]} />
       </div>
       
       {/* Main Visuals layout Right */}
