@@ -20,7 +20,7 @@ export const genaImages = {
   imgImage1899:  `${base}gena/836ee22e7302d13e324a18b589d39d7b97988ed6.png`, // Context visual graphic
 
   // ─── Work Process Flowchart Block ────────────────────────────────────────────────
-  imgWorkProcess: `${base}gena/work-process.png`, // Work process flowchart
+  imgWorkProcess: `${base}gena/Work_Process02.png`, // Work process flowchart
 
   // ─── Challenge & Background ────────────────────────────────────────────────
   imgAi1:        `${base}gena/ddd4472ccf634957679528d765008d5a7c6765b2.png`, // AI complexity icon
@@ -33,6 +33,8 @@ export const genaImages = {
   imgRectangle82742: `${base}gena/63df833ee3a88350bbcef17e594e17a59041b496.png`,
   imgRectangle82743: `${base}gena/d4fc113f524a80f48caaed157675c78281990f4c.png`,
   imgImage1:         `${base}gena/070f19353038a343ee2460c110687867ecc22003.png`,
+  // TODO: download Figma asset (expires 7 days) and move to public/gena/
+  imgCompetitorBg:   'https://www.figma.com/api/mcp/asset/60dea077-bdbe-4837-93da-3630ed45f351',
 
   // ─── Guardrail Features ────────────────────────────────────────────────────
   imgRectangle82744: `${base}gena/50f0506b133bf9b6c85af65f2cbae7ef15afbede.png`, // UI preview sample
