@@ -14,9 +14,9 @@ export const images = {
   uiHomepage1:  `${base}images/whatidid-ui-homepage.png`,
 
   // Design Direction — one flat image per card (no layered overlays)
-  direction1:   `${base}images/design-direction-01.png`,
-  direction2:   `${base}images/design-direction-02.png`,
-  direction3:   `${base}images/design-direction-03.png`,
+  direction1:   `${base}images/Project_tostem01.png`,
+  direction2:   `${base}images/Project_tostem02.png`,
+  direction3:   `${base}images/Project_tostem03.png`,
 
   // Phase I Final UI — 12 screens matching Figma node order
   styleGuide:   `${base}images/finalui-style-guide.png`,
@@ -43,17 +43,14 @@ export const navItems = [
 
 // ─── Project metadata ───────────────────────────────────────────────────────
 export const projectInfo = {
-  duration:  '10 Week',
-  period:    '(JUN 2022 – AUG 2022)',
-  platform:  'Website',
-  role:      'UI Design',
+  duration:  '9 Week',
+  period:    '(JUN 2022 - AUG 2022)',
+  platform:  'Implementation Website',
+  role:      'Ui Design',
 }
 
 // ─── "What I did" bullet list ────────────────────────────────────────────────
 export const whatIDidItems = [
-  {
-    parts: [{ text: 'Design direction to support sales proposals.', highlight: false }],
-  },
   {
     parts: [
       { text: 'Gather business & user ',  highlight: false },
@@ -61,7 +58,10 @@ export const whatIDidItems = [
     ],
   },
   {
-    parts: [{ text: 'Designed interface screens aligned with clients brand guidelines', highlight: false }],
+    parts: [
+      { text: 'Designed interface',       highlight: true  },
+      { text: ' screens aligned with clients brand guidelines', highlight: false },
+    ],
   },
   {
     parts: [

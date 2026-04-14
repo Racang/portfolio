@@ -12,6 +12,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage    from './pages/HomePage'
 import TostemPage  from './pages/TostemPage'
 import GenaPage   from './pages/GenaPage'
+import ThaioilPage from './pages/ThaioilPage'
 import AboutPage   from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
 import ProjectsPage from './pages/ProjectsPage'
@@ -26,7 +27,7 @@ export default function App() {
         <Route path="/projects"           element={<ProjectsPage />} />
         <Route path="/projects/tostem"    element={<TostemPage />} />
         <Route path="/projects/gena"      element={<GenaPage />} />
-        {/* Future project detail pages go here */}
+        <Route path="/projects/thaioil"   element={<ThaioilPage />} />
       </Routes>
     </BrowserRouter>
   )

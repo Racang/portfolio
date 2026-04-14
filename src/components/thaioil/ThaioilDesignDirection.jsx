@@ -1,36 +1,15 @@
-import { images } from '../data/mockData'
+import { thaioilImages, thaioilDirections } from '../../data/thaioilData'
 
-const directions = [
-  {
-    src:        images.direction1,
-    alt:        'Design direction 1 — Based on Brand CI',
-    labelBold:  'Direction 1 - ',
-    labelLight: 'Based on Brand CI\n(Modern, Lively, Sustainability)',
-  },
-  {
-    src:        images.direction2,
-    alt:        'Design direction 2 — Dark Mode',
-    labelBold:  'Direction 2 - ',
-    labelLight: 'Dark Mode\n(Modern, Creative, Product)',
-  },
-  {
-    src:        images.direction3,
-    alt:        'Design direction 3 — White Mode',
-    labelBold:  'Direction 3 - ',
-    labelLight: 'White Mode\n(Modern, Neat, Product)',
-  },
-]
-
-export default function DesignDirection() {
+export default function ThaioilDesignDirection() {
   return (
     <section
       className="content-stretch flex flex-col gap-[44px] items-center px-[40px] lg:px-[190px] py-[64px] relative shrink-0 w-full z-10"
-      aria-labelledby="design-direction-heading"
+      aria-labelledby="thaioil-direction-heading"
     >
       {/* ── Header ────────────────────────────────────────── */}
       <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 text-grey-800 w-full max-w-[798px] text-center">
         <h2
-          id="design-direction-heading"
+          id="thaioil-direction-heading"
           className="font-fredoka font-semibold text-section-title w-full"
           style={{ fontVariationSettings: "'wdth' 100" }}
         >
@@ -46,9 +25,9 @@ export default function DesignDirection() {
 
       {/* ── Direction image grid ───────────────────────────── */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-[30px] w-full">
-        {directions.map(({ src, alt, labelBold, labelLight }) => (
+        {thaioilDirections.map(({ imgKey, alt, labelBold, labelLight }) => (
           <div
-            key={labelBold}
+            key={imgKey}
             className="flex flex-col gap-[10px] w-full max-w-[630px] mx-auto lg:max-w-none"
           >
             <p
@@ -60,7 +39,7 @@ export default function DesignDirection() {
             </p>
             <div className="bg-white rounded-[8px] shadow-grey-card overflow-hidden">
               <img
-                src={src}
+                src={thaioilImages[imgKey]}
                 alt={alt}
                 className="w-full h-auto block"
                 loading="lazy"
