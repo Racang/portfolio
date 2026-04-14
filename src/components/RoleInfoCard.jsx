@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+import { fadeUp, viewportOnce } from '../lib/animations'
 import { images, projectInfo } from '../data/mockData'
 import { genaImages } from '../data/genaData'
 
@@ -33,7 +35,13 @@ export default function RoleInfoCard() {
       className="content-stretch flex flex-col items-center overflow-clip px-[40px] lg:px-[213px] py-[37px] relative shrink-0 w-full z-10"
       aria-label="Project information"
     >
-      <div className="bg-white flex flex-wrap max-[1279px]:flex-col gap-[60px] max-[1279px]:gap-[40px] items-center justify-center px-[40px] py-[36px] relative rounded-[80px] shadow-grey-card shrink-0 max-w-[1014px] w-full">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        className="bg-white flex flex-wrap max-[1279px]:flex-col gap-[60px] max-[1279px]:gap-[40px] items-center justify-center px-[40px] py-[36px] relative rounded-[80px] shadow-grey-card shrink-0 max-w-[1014px] w-full"
+      >
 
         {/* Icon block — exact clone of GenaRoleSection */}
         <div className="flex gap-[10px] items-center relative shrink-0">
@@ -60,7 +68,7 @@ export default function RoleInfoCard() {
             <p>{projectInfo.role}</p>
           </StatColumn>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

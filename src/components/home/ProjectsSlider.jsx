@@ -119,13 +119,13 @@ export default function ProjectsSlider() {
       className="relative w-full bg-white overflow-hidden select-none z-0"
       style={{
         marginTop:     '-120px',
-        paddingTop:    'calc(clamp(60px, 6.8vw, 100px) + 120px)',
+        paddingTop:    'calc(clamp(40px, 6.8vw, 100px) + 120px)',
         marginBottom:  '-100px',
-        paddingBottom: 'calc(clamp(60px, 7.6vw, 100px) + 100px)',
+        paddingBottom: 'calc(clamp(40px, 7.6vw, 100px) + 100px)',
       }}
       aria-label="My Projects"
     >
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-20">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-20">
 
         {/* ── Heading ──────────────────────────────────────────── */}
         <motion.h2
@@ -153,13 +153,13 @@ export default function ProjectsSlider() {
           >
             {/* Real cards + one looping clone of projects[0] appended for infinite right-side preview */}
             {[...projects, { ...projects[0], _clone: true }].map((p, i) => (
-              <div
+            <div
                 key={p._clone ? `${p.id}-clone` : p.id}
                 data-slot
-                className="flex items-center shrink-0"
+                className="flex flex-col md:flex-row items-center shrink-0"
                 style={{
-                  width:      'clamp(260px, 72vw, 1024px)',
-                  gap:        '36px',
+                  width:      'clamp(280px, 90vw, 1024px)',
+                  gap:        '24px',
                   opacity:    (!p._clone && i === current) ? 1 : 0.6,
                   transition: 'opacity 0.4s ease',
                   cursor:     (p._clone || i !== current) ? 'pointer' : 'default',
@@ -172,8 +172,8 @@ export default function ProjectsSlider() {
               >
                 {/* ── Left: card + blob ─────────────────────── */}
                 <div
-                  className="relative shrink-0"
-                  style={{ width: 'clamp(260px, 32vw, 460px)' }}
+                  className="relative shrink-0 w-full md:w-auto"
+                  style={{ width: 'clamp(240px, 32vw, 460px)', maxWidth: '100%' }}
                 >
                   <div
                     className="absolute pointer-events-none select-none z-0"

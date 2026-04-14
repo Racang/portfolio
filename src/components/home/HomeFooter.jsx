@@ -25,11 +25,14 @@ export default function HomeFooter() {
 
       {/* ── Email line — centered at 58.57% from top ────── */}
       <p
-        className="absolute inset-x-0 text-center font-fredoka font-normal text-grey-700 tracking-[2px] whitespace-nowrap px-4 text-body"
+        className="absolute inset-x-0 text-center font-fredoka font-normal text-grey-700 tracking-[2px] px-4 text-body"
         style={{
           top: '58.57%',
           transform: 'translateY(calc(-50% + 10px))',
           fontVariationSettings: "'wdth' 100",
+          fontSize: 'clamp(12px, 1.4vw, 18px)',
+          whiteSpace: 'normal',
+          wordBreak: 'break-word',
         }}
       >
         I'd love to hear from you:{' '}

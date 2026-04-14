@@ -1,23 +1,29 @@
+import { motion } from 'framer-motion'
+import { fadeLeft, fadeRight, staggerContainer, viewportOnce } from '../../lib/animations'
 import { thaioilImages } from '../../data/thaioilData'
 
 export default function ThaioilUserRequirement() {
   return (
-    <section
+    <motion.section
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportOnce}
       className="content-center flex flex-wrap max-lg:flex-col gap-[40px] items-center max-lg:items-start px-[40px] lg:px-[80px] py-[64px] relative shrink-0 w-full z-10"
       aria-labelledby="thaioil-requirement-heading"
     >
       {/* ── Left: illustration ─────────────────────────────── */}
-      <div className="flex-[1_0_0] max-lg:flex-none max-lg:w-full max-lg:max-w-[500px] relative aspect-[2129/1978] overflow-hidden">
+      <motion.div variants={fadeLeft} className="flex-[1_0_0] max-lg:flex-none max-lg:w-full max-lg:max-w-[500px] relative aspect-[2129/1978] overflow-hidden">
         <img
           src={thaioilImages.requirementIllustration}
           alt="User requirement illustration"
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           loading="lazy"
         />
-      </div>
+      </motion.div>
 
-      {/* ── Right: text ────────────────────────────────────── */}
-      <div className="flex-[1_0_0] max-lg:flex-none max-lg:w-full flex flex-col gap-[36px] items-start relative">
+      {/* ── Right: text ────────────────────────────────── */}
+      <motion.div variants={fadeRight} className="flex-[1_0_0] max-lg:flex-none max-lg:w-full flex flex-col gap-[36px] items-start relative">
         <h2
           id="thaioil-requirement-heading"
           className="font-fredoka font-semibold text-section-title text-grey-800 w-full"
@@ -53,7 +59,7 @@ export default function ThaioilUserRequirement() {
             </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   )
 }

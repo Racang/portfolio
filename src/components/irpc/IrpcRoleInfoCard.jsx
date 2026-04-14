@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { fadeUp, viewportOnce } from '../../lib/animations'
-import { thaioilImages, thaioilInfo } from '../../data/thaioilData'
+import { irpcImages, irpcInfo } from '../../data/irpcData'
 
 function StatColumn({ label, children }) {
   return (
@@ -21,18 +21,18 @@ function StatColumn({ label, children }) {
   )
 }
 
-export default function ThaioilRoleInfoCard() {
+export default function IrpcRoleInfoCard() {
   return (
     <div
       className="content-stretch flex flex-col items-center overflow-clip px-[40px] lg:px-[213px] py-[37px] relative shrink-0 w-full z-10"
       aria-label="Project information"
     >
       <motion.div
+        className="bg-white flex flex-wrap max-[1279px]:flex-col gap-[60px] max-[1279px]:gap-[40px] items-center justify-center px-[40px] py-[36px] relative rounded-[80px] shadow-grey-card shrink-0 max-w-[1014px] w-full"
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
         viewport={viewportOnce}
-        className="bg-white flex flex-wrap max-[1279px]:flex-col gap-[60px] max-[1279px]:gap-[40px] items-center justify-center px-[40px] py-[36px] relative rounded-[80px] shadow-grey-card shrink-0 max-w-[1014px] w-full"
       >
 
         {/* Icon block */}
@@ -42,7 +42,7 @@ export default function ThaioilRoleInfoCard() {
             <img
               alt=""
               className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-              src={thaioilImages.computerIcon}
+              src={irpcImages.computerIcon}
             />
           </div>
         </div>
@@ -50,13 +50,15 @@ export default function ThaioilRoleInfoCard() {
         {/* Metadata columns */}
         <div className="content-start flex flex-wrap max-[1279px]:flex-col gap-[48px] max-[1279px]:gap-[24px] items-start relative shrink-0 max-[1279px]:w-full">
           <StatColumn label="Duration:">
-            <p>{thaioilInfo.duration}</p>
+            <p>{irpcInfo.duration}</p>
+            <p className="text-[16px] leading-[1.3] text-[#6e7390]">{irpcInfo.period}</p>
           </StatColumn>
           <StatColumn label="Platform">
-            <p>{thaioilInfo.platform}</p>
+            <p>{irpcInfo.platform}</p>
           </StatColumn>
           <StatColumn label="Role">
-            <p>{thaioilInfo.role}</p>
+            <p>{irpcInfo.role}</p>
+            <p className="text-[16px] leading-[1.3] text-[#6e7390]">{irpcInfo.roleNote}</p>
           </StatColumn>
         </div>
       </motion.div>

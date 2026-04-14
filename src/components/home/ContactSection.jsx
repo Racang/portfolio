@@ -18,11 +18,11 @@ function ContactCard({ icon, label, value, href }) {
     <motion.a
       href={href}
       variants={scaleIn}
-      className="relative flex flex-col items-center gap-3 w-[350px] max-w-full group"
+      className="relative flex flex-col items-center gap-3 w-full max-w-[350px] group"
       whileHover={{ scale: 1.03 }}
     >
       {/* Bubble wrapper SVG */}
-      <div className="relative w-[411px] max-w-full h-[237px] flex items-center justify-center">
+      <div className="relative w-full max-w-[411px] h-auto aspect-[411/237] flex items-center justify-center">
         <img
           src={homeImages.bubbleShape}
           alt=""
@@ -66,23 +66,23 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative w-full overflow-x-hidden z-10"
+      className="relative w-full z-10"
       aria-label="Contact"
     >
-      {/* ── Background image — natural aspect ratio (2884×1808), full width ── */}
+      {/* ── Background image — absolutely positioned so it never sets section height ── */}
       <img
         src={homeImages.contactBg}
         alt=""
         aria-hidden="true"
-        className="w-full h-auto block pointer-events-none select-none"
+        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
       />
 
-      {/* ── Main content — overlaid on the background ────────── */}
+      {/* ── Main content — in normal flow, drives section height ────────── */}
       <motion.div
-        className="absolute inset-0 z-10 max-w-[1440px] mx-auto px-8 lg:px-20 flex flex-col items-center"
+        className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-8 lg:px-20 flex flex-col items-center"
         style={{
-          paddingTop:    'clamp(80px, 8.4vw, 150px)',
-          paddingBottom: '80px',
+          paddingTop:    'clamp(40px, 8.4vw, 150px)',
+          paddingBottom: 'clamp(120px, 12vw, 160px)',
         }}
         variants={staggerContainer}
         initial="hidden"
@@ -92,7 +92,7 @@ export default function ContactSection() {
         {/* Heading */}
         <motion.h2
           variants={fadeUp}
-          className="font-fredoka font-semibold text-grey-800 text-center mb-10 text-section-title"
+          className="font-fredoka font-semibold text-grey-800 text-center mb-6 md:mb-10 text-section-title"
           style={{ fontVariationSettings: "'wdth' 100" }}
         >
           Let's Connect
@@ -101,7 +101,7 @@ export default function ContactSection() {
         {/* Cards row + centre character */}
         <motion.div
           variants={staggerContainer}
-          className="flex flex-col md:flex-row items-center justify-between gap-6 w-full mb-12"
+          className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 w-full mb-6 md:mb-12"
         >
           {/* Email card */}
           <ContactCard
@@ -114,7 +114,7 @@ export default function ContactSection() {
           {/* Centre character illustration */}
           <motion.div
             variants={scaleIn}
-            className="relative w-[300px] h-[300px] shrink-0 hidden md:block"
+            className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] shrink-0 hidden md:block"
           >
             {/* Left decoration — anchored to girl container */}
             <motion.div

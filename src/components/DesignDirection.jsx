@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+import { fadeUp, scaleIn, staggerContainer, viewportOnce } from '../lib/animations'
 import { images } from '../data/mockData'
 
 const directions = [
@@ -28,7 +30,13 @@ export default function DesignDirection() {
       aria-labelledby="design-direction-heading"
     >
       {/* ── Header ────────────────────────────────────────── */}
-      <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 text-grey-800 w-full max-w-[798px] text-center">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 text-grey-800 w-full max-w-[798px] text-center"
+      >
         <h2
           id="design-direction-heading"
           className="font-fredoka font-semibold text-section-title w-full"
@@ -42,13 +50,21 @@ export default function DesignDirection() {
         >
           Based on the client's requirements, we translated the insights into the following design directions.
         </p>
-      </div>
+      </motion.div>
 
       {/* ── Direction image grid ───────────────────────────── */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[30px] w-full">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        className="grid grid-cols-1 lg:grid-cols-3 gap-[30px] w-full"
+      >
         {directions.map(({ src, alt, labelBold, labelLight }) => (
-          <div
+          <motion.div
             key={labelBold}
+            variants={scaleIn}
+            whileHover={{ y: -4 }}
             className="flex flex-col gap-[10px] w-full max-w-[630px] mx-auto lg:max-w-none"
           >
             <p
@@ -66,9 +82,9 @@ export default function DesignDirection() {
                 loading="lazy"
               />
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }

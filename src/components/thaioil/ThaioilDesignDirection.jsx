@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+import { fadeUp, scaleIn, staggerContainer, viewportOnce } from '../../lib/animations'
 import { thaioilImages, thaioilDirections } from '../../data/thaioilData'
 
 export default function ThaioilDesignDirection() {
@@ -7,7 +9,13 @@ export default function ThaioilDesignDirection() {
       aria-labelledby="thaioil-direction-heading"
     >
       {/* ── Header ────────────────────────────────────────── */}
-      <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 text-grey-800 w-full max-w-[798px] text-center">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 text-grey-800 w-full max-w-[798px] text-center"
+      >
         <h2
           id="thaioil-direction-heading"
           className="font-fredoka font-semibold text-section-title w-full"
@@ -21,17 +29,25 @@ export default function ThaioilDesignDirection() {
         >
           Based on the client's requirements, we translated the insights into the following design directions.
         </p>
-      </div>
+      </motion.div>
 
       {/* ── Direction image grid ───────────────────────────── */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[30px] w-full">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        className="grid grid-cols-1 lg:grid-cols-3 gap-[30px] w-full"
+      >
         {thaioilDirections.map(({ imgKey, alt, labelBold, labelLight }) => (
-          <div
+          <motion.div
             key={imgKey}
+            variants={scaleIn}
+            whileHover={{ y: -4 }}
             className="flex flex-col gap-[10px] w-full max-w-[630px] mx-auto lg:max-w-none"
           >
             <p
-              className="font-fredoka font-medium text-[clamp(14px,_1.4vw,_20px)] leading-[1.3] text-[#001e7f] whitespace-pre-wrap w-full"
+              className="font-fredoka font-medium text-[clamp(14px,_1.4vw,_18px)] leading-[1.3] text-[#001e7f] w-full min-h-[2.6em] max-[1420px]:min-h-[3.9em]"
               style={{ fontVariationSettings: "'wdth' 100" }}
             >
               <span className="font-medium">{labelBold}</span>
@@ -45,9 +61,9 @@ export default function ThaioilDesignDirection() {
                 loading="lazy"
               />
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }

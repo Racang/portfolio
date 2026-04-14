@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+import { fadeLeft, fadeRight, staggerContainer, viewportOnce } from '../../lib/animations'
 import { thaioilImages, thaioilWhatIDid } from '../../data/thaioilData'
 
 function BulletLine({ parts }) {
@@ -20,12 +22,16 @@ function BulletLine({ parts }) {
 
 export default function ThaioilWhatIDid() {
   return (
-    <section
+    <motion.section
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportOnce}
       className="content-center flex flex-wrap max-lg:flex-col gap-[40px] items-center max-lg:items-start px-[40px] lg:px-[80px] py-[64px] relative shrink-0 w-full z-10"
       aria-labelledby="thaioil-what-i-did-heading"
     >
       {/* ── Left: text ─────────────────────────────────────── */}
-      <div className="content-stretch flex flex-[1_0_0] max-lg:flex-none max-lg:w-full flex-col gap-[56px] items-start pr-[40px] max-lg:pr-0 relative">
+      <motion.div variants={fadeLeft} className="content-stretch flex flex-[1_0_0] max-lg:flex-none max-lg:w-full flex-col gap-[56px] items-start pr-[40px] max-lg:pr-0 relative">
         <div className="content-stretch flex flex-col gap-[24px] items-start max-w-[500px] relative shrink-0 w-full">
           <h2
             id="thaioil-what-i-did-heading"
@@ -40,10 +46,11 @@ export default function ThaioilWhatIDid() {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* ── Right: UI screenshot ────────────────────────────── */}
-      <div
+      <motion.div
+        variants={fadeRight}
         className="flex-[1_0_0] max-lg:flex-none max-lg:w-full max-lg:max-w-[585px] relative aspect-[585/671] rounded-[24px] shadow-card-dark overflow-hidden"
         aria-label="Thaioil homepage UI screenshot"
       >
@@ -53,7 +60,7 @@ export default function ThaioilWhatIDid() {
           className="absolute inset-0 w-full h-full object-cover object-top pointer-events-none"
           loading="lazy"
         />
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   )
 }

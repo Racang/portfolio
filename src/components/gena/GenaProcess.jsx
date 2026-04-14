@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { fadeUp, viewportOnce } from '../../lib/animations';
 import { genaImages } from '../../data/genaData';
 
 const ArrowRight = () => (
@@ -29,7 +31,13 @@ const DesktopReturnArrow = () => (
 
 export default function GenaProcess() {
   return (
-    <div className="content-stretch flex flex-col gap-[44px] items-center p-[40px] lg:p-[80px] relative shrink-0 w-full z-10 bg-white">
+    <motion.div
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportOnce}
+      className="content-stretch flex flex-col gap-[44px] items-center p-[40px] lg:p-[80px] relative shrink-0 w-full z-10 bg-white"
+    >
       <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 text-[#3e446b] w-full max-w-[798px]">
         <h2 className="font-fredoka font-semibold text-section-title relative shrink-0 text-center w-full" style={{ fontVariationSettings: "'wdth' 100" }}>
           Work Process
@@ -39,6 +47,6 @@ export default function GenaProcess() {
       <div className="w-full max-w-[980px] flex flex-col relative mx-auto mt-6">
         <img alt="" className="w-full h-auto object-contain" src={genaImages.imgWorkProcess} />
       </div>
-    </div>
+    </motion.div>
   );
 }

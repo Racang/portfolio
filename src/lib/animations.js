@@ -62,5 +62,15 @@ export const floatY = {
   },
 }
 
+/** Soft image reveal — minimal scale (0.97 → 1) for screenshots and banners */
+export const imgReveal = {
+  hidden:  { opacity: 0, scale: 0.97 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+  },
+}
+
 /** Common viewport trigger settings */
 export const viewportOnce = { once: true, margin: '-80px' }

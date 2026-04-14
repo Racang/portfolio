@@ -99,19 +99,19 @@ export const thaioilDirections = [
     imgKey:     'direction1',
     alt:        'Direction 1 — Dynamic Innovative Professional',
     labelBold:  'Direction 1 - ',
-    labelLight: 'Dynamic Innovative\nProfessional',
+    labelLight: 'Dynamic Innovative Professional',
   },
   {
     imgKey:     'direction2',
     alt:        'Direction 2 — Professional Sustainable image',
     labelBold:  'Direction 2 - ',
-    labelLight: 'Professional Sustainable image\nusing photo based',
+    labelLight: 'Professional Sustainable image using photo based',
   },
   {
     imgKey:     'direction3',
     alt:        'Direction 3 — Modern Professional & Sustainable',
-    labelBold:  'Direction 3 - ',
-    labelLight: 'Modern, Professional & Sustainable\n(A blend of Directions 1 & 2)',
+    labelBold:  'Direction 3',
+    labelLight: ' - Modern, Professional & Sustainable (A blend of Directions 1 & 2)',
   },
 ]
 

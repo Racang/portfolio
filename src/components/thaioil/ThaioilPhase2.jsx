@@ -1,15 +1,20 @@
+import { motion } from 'framer-motion'
+import { fadeUp, scaleIn, staggerContainer, viewportOnce } from '../../lib/animations'
 import { thaioilImages, thaioilPhase2Screens } from '../../data/thaioilData'
 
 function ScreenCard({ src, alt, aspectClass = 'aspect-[2/1]' }) {
   return (
-    <div className={`relative w-full rounded-[24px] overflow-hidden ${aspectClass}`}>
+    <motion.div
+      variants={scaleIn}
+      className={`relative w-full rounded-[24px] overflow-hidden ${aspectClass}`}
+    >
       <img
         src={src}
         alt={alt}
         className="absolute inset-0 w-full h-full object-cover object-top"
         loading="lazy"
       />
-    </div>
+    </motion.div>
   )
 }
 
@@ -20,7 +25,13 @@ export default function ThaioilPhase2() {
       aria-labelledby="thaioil-phase2-heading"
     >
       {/* ── Header ─────────────────────────────────────────── */}
-      <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 text-grey-800 w-full">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 text-grey-800 w-full"
+      >
         <h2
           id="thaioil-phase2-heading"
           className="font-fredoka font-semibold text-section-title text-center w-full"
@@ -40,10 +51,16 @@ export default function ThaioilPhase2() {
         >
           We began by reviewing all remaining pages of the website and attempted to group pages that could share the same layout for reuse. After that, I created sample page designs as template references, which were then handed off to the vendor to design the remaining screens while maintaining consistency.
         </p>
-      </div>
+      </motion.div>
 
       {/* ── Screenshots ────────────────────────────────────── */}
-      <div className="flex flex-col gap-[40px] w-full">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        className="flex flex-col gap-[40px] w-full"
+      >
         {thaioilPhase2Screens.map(({ imgKey, alt, aspectClass }) => (
           <ScreenCard
             key={imgKey}
@@ -52,7 +69,7 @@ export default function ThaioilPhase2() {
             aspectClass={aspectClass}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }
