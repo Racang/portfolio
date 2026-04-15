@@ -28,6 +28,7 @@ export const homeImages = {
   arrowIcon:      `${base}images/ba43d650bfed32aa6b7ab5060c5502ff9a78caf1.svg`,
 
   // Contact section
+  contactMobileWave: `${base}images/contact-wave-top.svg`,                          // Mobile-only top wave for contact section (375×67)
   contactBg:      `${base}images/Home_Contact_bg.png`,                              // Contact section background (2884×1808)
   contactDecor1:  `${base}images/f53a4115a5ea688effd30d31ccb3f541b17bfe9b.svg`,  // Group 1686550951
   contactDecor2:  `${base}images/d8d51d09e8c86ac0a3af4d346a3862fa8992373c.svg`,  // Group 1686550954

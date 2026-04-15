@@ -125,7 +125,7 @@ export default function ProjectsSlider() {
       }}
       aria-label="My Projects"
     >
-      <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-20">
+      <div className="max-w-[1440px] mx-auto px-[24px] md:px-8 lg:px-20 pt-[21px] md:pt-0 pb-[21px] md:pb-0">
 
         {/* ── Heading ──────────────────────────────────────────── */}
         <motion.h2
@@ -231,7 +231,7 @@ export default function ProjectsSlider() {
         </div>
 
         {/* ── Pagination — bottom-right, 60px below track ──────── */}
-        <div className="flex justify-end mt-[60px]">
+        <div className="flex justify-center md:justify-end mt-8 md:mt-[60px]">
 
           {/* Pagination: line renders between active item and next (or before last when last is active) */}
           <div className="flex items-center gap-5">

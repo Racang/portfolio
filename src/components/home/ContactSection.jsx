@@ -13,12 +13,12 @@ import { homeImages } from '../../data/homeData'
 import Button from '../ui/Button'
 import { fadeUp, scaleIn, staggerContainer, floatY, viewportOnce } from '../../lib/animations'
 
-function ContactCard({ icon, label, value, href }) {
+function ContactCard({ icon, label, value, href, className: extraClass = '' }) {
   return (
     <motion.a
       href={href}
       variants={scaleIn}
-      className="relative flex flex-col items-center gap-3 w-full max-w-[350px] group"
+      className={`relative flex flex-col items-center gap-3 w-full max-w-[350px] group ${extraClass}`.trim()}
       whileHover={{ scale: 1.03 }}
     >
       {/* Bubble wrapper SVG */}
@@ -69,12 +69,30 @@ export default function ContactSection() {
       className="relative w-full z-10"
       aria-label="Contact"
     >
-      {/* ── Background image — absolutely positioned so it never sets section height ── */}
+      {/* ── Desktop background image ── */}
       <img
         src={homeImages.contactBg}
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
+        className="hidden md:block absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
+      />
+
+      {/* ── Mobile: wave transition + solid pink bg ── */}
+      <div
+        className="md:hidden absolute top-0 inset-x-0 pointer-events-none select-none z-0"
+        aria-hidden="true"
+        style={{ height: '67px' }}
+      >
+        <img
+          src={homeImages.contactMobileWave}
+          alt=""
+          style={{ display: 'block', width: '100%', height: '100%' }}
+        />
+      </div>
+      <div
+        className="md:hidden absolute inset-x-0 bottom-0 pointer-events-none select-none z-0"
+        aria-hidden="true"
+        style={{ top: '60px', backgroundColor: '#F8E9E6' }}
       />
 
       {/* ── Main content — in normal flow, drives section height ────────── */}
@@ -89,10 +107,13 @@ export default function ContactSection() {
         whileInView="visible"
         viewport={viewportOnce}
       >
+        {/* Mobile top spacer — accounts for the 67px wave above content area */}
+        <div className="md:hidden h-[27px] shrink-0" aria-hidden="true" />
+
         {/* Heading */}
         <motion.h2
           variants={fadeUp}
-          className="font-fredoka font-semibold text-grey-800 text-center mb-6 md:mb-10 text-section-title"
+          className="font-fredoka font-semibold text-grey-800 text-center mb-[68px] md:mb-10 text-section-title"
           style={{ fontVariationSettings: "'wdth' 100" }}
         >
           Let's Connect
@@ -101,7 +122,7 @@ export default function ContactSection() {
         {/* Cards row + centre character */}
         <motion.div
           variants={staggerContainer}
-          className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 w-full mb-6 md:mb-12"
+          className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-6 w-full mb-6 md:mb-12"
         >
           {/* Email card */}
           <ContactCard
@@ -109,25 +130,26 @@ export default function ContactSection() {
             label="Email me"
             value="rachaya.ang@gmail.com"
             href="mailto:rachaya.ang@gmail.com"
+            className="order-2 md:order-1"
           />
 
-          {/* Centre character illustration */}
+          {/* Centre character illustration (desktop: between cards; mobile: below both cards) */}
           <motion.div
             variants={scaleIn}
-            className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] shrink-0 hidden md:block"
+            className="relative w-[150px] h-[150px] md:w-[300px] md:h-[300px] shrink-0 order-3 md:order-2"
           >
-            {/* Left decoration — anchored to girl container */}
+            {/* Left decoration — desktop only */}
             <motion.div
-              className="absolute -left-14 bottom-16 w-[82px] pointer-events-none select-none z-10"
+              className="absolute -left-14 bottom-16 w-[82px] pointer-events-none select-none z-10 hidden md:block"
               variants={floatY}
               animate="animate"
             >
               <img src={homeImages.contactDecor2} alt="" aria-hidden="true" className="w-full h-auto" />
             </motion.div>
 
-            {/* Right decoration — anchored to girl container */}
+            {/* Right decoration — desktop only */}
             <motion.div
-              className="absolute -right-14 top-16 w-[88px] pointer-events-none select-none z-10"
+              className="absolute -right-14 top-16 w-[88px] pointer-events-none select-none z-10 hidden md:block"
               variants={floatY}
               animate="animate"
               transition={{ delay: 1 }}
@@ -150,6 +172,7 @@ export default function ContactSection() {
             label="Call me"
             value="+66955892108"
             href="tel:+66955892108"
+            className="order-1 md:order-3"
           />
         </motion.div>
 

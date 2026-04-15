@@ -17,15 +17,13 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative w-full overflow-hidden z-10 md:min-h-[clamp(480px,53vw,764px)]"
+      className="relative w-full overflow-hidden z-10 min-h-[828px] md:min-h-[clamp(480px,53vw,764px)]"
       style={{ marginTop: '-120px' }}
       aria-label="About preview"
     >
-      {/* ── Wave background (Union SVG, true full-bleed) ──────────
-          Uses w-screen + left-50% -translate-x-50% so the background
-          always spans the full viewport regardless of ancestor width. */}
+      {/* ── Desktop/tablet: full-bleed wave image fills section height ── */}
       <div
-        className="absolute inset-y-0 pointer-events-none select-none z-0"
+        className="hidden md:block absolute inset-y-0 pointer-events-none select-none z-0"
         style={{ left: '50%', transform: 'translateX(-50%)', width: '100vw' }}
       >
         <img
@@ -36,12 +34,46 @@ export default function AboutSection() {
         />
       </div>
 
+      {/* ── Mobile: 3-layer background ── */}
+      {/* Layer 1: top wave — organic top boundary, fixed height */}
+      <div
+        className="md:hidden absolute top-0 inset-x-0 pointer-events-none select-none z-0"
+        aria-hidden="true"
+        style={{ height: '20px' }}
+      >
+        <img
+          src={`${import.meta.env.BASE_URL}images/wave-top.svg`}
+          alt=""
+          style={{ display: 'block', width: '100%', height: '100%' }}
+        />
+      </div>
+
+      {/* Layer 2: solid pink fill — stretches to fill content */}
+      <div
+        className="md:hidden absolute inset-x-0 pointer-events-none select-none z-0"
+        aria-hidden="true"
+        style={{ top: '18px', bottom: '21px', backgroundColor: '#F8E9E6' }}
+      />
+
+      {/* Layer 3: bottom wave — organic bottom boundary, fixed height */}
+      <div
+        className="md:hidden absolute bottom-0 inset-x-0 pointer-events-none select-none z-0"
+        aria-hidden="true"
+        style={{ height: '23px' }}
+      >
+        <img
+          src={`${import.meta.env.BASE_URL}images/wave-bottom.svg`}
+          alt=""
+          style={{ display: 'block', width: '100%', height: '100%' }}
+        />
+      </div>
+
       {/* ── Content ───────────────────────────────────────────── */}
       <motion.div
-        className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-8 lg:px-20 flex flex-col md:flex-row items-center gap-8 md:gap-10 lg:gap-20 h-full"
+        className="relative z-10 max-w-[1440px] mx-auto px-8 md:px-8 lg:px-20 flex flex-col md:flex-row items-center gap-6 md:gap-10 lg:gap-20 h-full"
         style={{
-          paddingTop: 'clamp(60px, 8.3vw, 120px)',
-          paddingBottom: 'clamp(60px, 9.7vw, 140px)',
+          paddingTop: 'clamp(96px, 8.3vw, 120px)',
+          paddingBottom: 'clamp(80px, 9.7vw, 140px)',
         }}
         variants={staggerContainer}
         initial="hidden"
@@ -89,37 +121,31 @@ export default function AboutSection() {
             Hello there! I'm Toey.
           </h2>
           <p
-            className="font-fredoka text-grey-400 text-body"
+            className="font-fredoka text-grey-400 text-[16px] leading-[1.6] md:text-body md:leading-[1.4]"
           >
             I'm a UX/UI Designer with over 6 years of experience in designing web applications
             and websites. I'm passionate about design and specialize in transforming complex
             workflows into intuitive, easy-to-use solutions.
           </p>
 
-          {/* Profile image — mobile/tablet only, centered above button */}
+          {/* Profile image — mobile only, circular, centered between text and button */}
           <motion.div
             variants={fadeLeft}
             className="relative md:hidden self-center"
-            style={{ width: 'clamp(180px, 50vw, 300px)', height: 'clamp(200px, 55vw, 330px)' }}
+            style={{ marginTop: '2.1rem', marginBottom: '2.1rem' }}
+            style={{ width: 300, height: 300 }}
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <img
-                src={homeImages.profileCircle}
-                alt=""
-                aria-hidden="true"
-                className="w-[75%] h-[75%] object-contain"
-              />
-            </div>
-            <div className="relative w-full h-full">
+            <div className="w-full h-full rounded-full overflow-hidden shadow-pink-sm">
               <img
                 src={homeImages.aboutProfile}
-                alt="Rachaya Angkanawin profile portrait"
-                className="w-full h-full object-contain object-bottom"
+                alt="Rachaya Angkanawin"
+                className="w-full object-cover"
+                style={{ height: '133.33%', objectPosition: 'center top', marginTop: '-28.81%' }}
               />
             </div>
           </motion.div>
 
-          <div className="pt-2">
+          <div className="pt-2 flex justify-center md:justify-start">
             <Button href="#contact" variant="filled">
               About&nbsp;&nbsp;Me
             </Button>

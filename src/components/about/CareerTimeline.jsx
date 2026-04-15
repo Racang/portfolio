@@ -24,7 +24,7 @@ const timeline = [
     company: 'Goconnext Co., Ltd.',
     subtitle: null,
     description:
-      'Collaborated directly with clients and stakeholders to gather requirements, define project scope, and transform business goals into responsive website experiences. Managed WordPress website projects from UX/UI design to deployment, including wireframes, documentation, client communication, and final handoff.',
+      'Participated in meetings with clients and stakeholders to gather requirements, understand business objectives and user needs, and define project scope, then translated those requirements into clear, user-friendly, and responsive website designs. Developed and implemented websites using WordPress, managing the process from design to deployment, while overseeing the end-to-end workflow from client communication and wireframing to documentation and final website handover.',
   },
   {
     year: '2021 – 2023',
@@ -32,7 +32,7 @@ const timeline = [
     company: 'InsightEra Co., Ltd.',
     subtitle: 'Gable Subsidiary',
     description:
-      'Supported digital product design improvements through competitor analysis, user journey mapping, and UI design focused on usability and interface clarity. Independently handled end-to-end website design projects and created branding assets, chatbot rich menus, and visual materials to ensure consistent user experiences.',
+      'Contributed to the design and improvement of digital products, focusing on enhancing usability, interface clarity, and overall user experience. Supported the UX/UI design process through competitor analysis, user journey mapping, interface design, and presenting design solutions to internal teams. Independently managed end-to-end website design projects, from requirement gathering and stakeholder discussions to cross-functional collaboration and developer handoff. Also designed branding materials, visual assets, and chatbot rich menu interfaces to ensure brand consistency and create intuitive user experiences.',
   },
   {
     year: '2023 – Now',
@@ -40,9 +40,10 @@ const timeline = [
     company: 'InsightEra Co., Ltd.',
     subtitle: 'Gable Subsidiary',
     description:
-      'Led UX/UI design for enterprise digital products covering product ideation, AI feature research, design systems, reusable components, and final interfaces. Created user stories, acceptance criteria, and developer walkthroughs to ensure seamless design-to-code implementation. Leveraged AI tools to accelerate wireframing, business validation, and UI review workflows while also leading website implementation projects from pre-sales to delivery.',
+      'Served as the main UX/UI Designer for enterprise digital products, covering product ideation, AI-related research, feature definition, high-fidelity wireframes, design systems, reusable UI components, and final interface designs in close collaboration with product teams. Also contributed to feature development for internal management tools through competitor research, feature ideation, and interface design aligned with established design systems. Created user stories and clear acceptance criteria based on designed UI features to ensure accurate implementation and quality standards. Managed developer handoff through walkthrough sessions and design-to-code processes, enabling a smooth translation from design to implementation. Leveraged AI tools to accelerate high-fidelity wireframing, business validation, and UI review workflows, significantly reducing turnaround and review time. Independently handled website implementation design projects from pre-sales support and design direction to client requirement gathering, interface design aligned with brand guidelines, stakeholder presentations, developer handoff, and cross-functional collaboration to ensure on-time delivery.',
   },
-]
+  
+    ]
 
 // Scroll progress thresholds at which each node activates (0–1)
 const NODE_THRESHOLDS = [0.08, 0.44, 0.76]
@@ -329,7 +330,7 @@ export default function CareerTimeline() {
             style={{
               fontSize: 'clamp(20px, 2.2vw, 32px)',
               fontVariationSettings: "'wdth' 100",
-              color: '#FF797E',
+              color: '#05A2C6',
             }}
             variants={{
               hidden:   { opacity: 0, y: 14 },
