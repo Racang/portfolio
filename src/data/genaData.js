@@ -47,8 +47,8 @@ export const genaImages = {
   imgRectangle82751: `${base}gena/41a09a1d688bff41225c77a8ee3bba85a2911dfd.png`, // UI preview sample
 
   // ─── Apply to other brands ─────────────────────────────────────────────────
-  imgRectangle82752: `${base}gena/1ab984c68a0794eef2a220d8187fe22d2d614c5e.png`,
-  imgRectangle82753: `${base}gena/9d296413cabc45e65964d33d76e382f65614aba8.png`,
+  imgRectangle82752: `${base}gena/Gena_Brand01.png`,
+  imgRectangle82753: `${base}gena/Gena_Brand02.png`,
 
   // ─── Structural Vectors & Layout Elements ──────────────────────────────────
   imgBg:         `${base}gena/9fa9badac60eeadcfe3b07cf1a9b0d5dfc13892b.svg`, // Tall purple bottom background component

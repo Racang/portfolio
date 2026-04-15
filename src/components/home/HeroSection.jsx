@@ -87,12 +87,8 @@ export default function HeroSection() {
               Resume
             </Button>
             <Button
-              href="#projects"
+              to="/projects"
               variant="outline"
-              onClick={(e) => {
-                e.preventDefault()
-                document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
-              }}
             >
               All Projects
             </Button>

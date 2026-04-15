@@ -42,7 +42,7 @@ export default function ProjectsPage() {
             className="max-w-[1440px] mx-auto"
             style={{ paddingInline: 'clamp(24px, 5.6vw, 80px)' }}
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[48px] gap-y-[36px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[48px] gap-y-[36px]">
               {projects.map((project, i) => (
                 <ProjectCard key={project.id} project={project} index={i} />
               ))}
