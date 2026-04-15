@@ -8,7 +8,6 @@
  *   - Right x=776: "More about myself" heading + 3 bio paragraphs in Fredoka 22px
  */
 import { motion } from 'framer-motion'
-import { homeImages } from '../../data/homeData'
 import { fadeLeft, fadeRight, staggerContainer, viewportOnce } from '../../lib/animations'
 
 export default function AboutProfile() {
@@ -19,24 +18,18 @@ export default function AboutProfile() {
       style={{ minHeight: 'clamp(500px, 70vw, 1005px)', marginTop: '-97px' }}
       aria-label="About profile"
     >
-      {/* ── Background — cream SVG with wavy bottom edge (node 40000420:22531) ── */}
+      {/* ── Background — cream fill matching Gena / What I Did section ── */}
       <div
         className="absolute inset-0 pointer-events-none select-none z-0"
         aria-hidden="true"
-      >
-        <img
-          src={homeImages.aboutProfileBg}
-          alt=""
-          className="w-full h-full"
-          style={{ display: 'block' }}
-        />
-      </div>
+        style={{ backgroundColor: '#FEFCF1' }}
+      />
 
       {/* ── Content row ─────────────────────────────────────── */}
       <motion.div
-        className="relative z-10 max-w-[1440px] mx-auto px-20 flex items-center gap-[72px]"
+        className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-8 lg:px-20 flex flex-col md:flex-row items-center gap-8 md:gap-[72px]"
         style={{
-          paddingTop:    'clamp(100px, 12.7vw, 183px)',
+          paddingTop:    'clamp(134px, 12.7vw, 183px)',
           paddingBottom: 'clamp(100px, 13.75vw, 198px)',
         }}
         variants={staggerContainer}
@@ -44,6 +37,22 @@ export default function AboutProfile() {
         whileInView="visible"
         viewport={viewportOnce}
       >
+        {/* ── Mobile: profile photo centered above bio ── */}
+        <motion.div
+          variants={fadeLeft}
+          className="md:hidden shrink-0 mx-auto"
+          style={{ width: 220, height: 220 }}
+        >
+          <div className="w-full h-full rounded-[28px] overflow-hidden shadow-card-dark">
+            <img
+              src={`${import.meta.env.BASE_URL}images/About_Profileimg.png`}
+              alt="Rachaya Angkanawin"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: 'center 0%' }}
+            />
+          </div>
+        </motion.div>
+
         {/* ── Left: Profile photo  (Figma: x=80, w=624, h=624, crop top -28.81%) ── */}
         <motion.div
           variants={fadeLeft}
@@ -63,8 +72,7 @@ export default function AboutProfile() {
         {/* ── Right: bio text  (Figma: shrink-0, w=584) ─────────── */}
         <motion.div
           variants={fadeRight}
-          className="flex flex-col gap-6 flex-1 min-w-0"
-          style={{ maxWidth: '584px' }}
+          className="flex flex-col gap-6 flex-1 min-w-0 md:max-w-[584px]"
         >
           {/* Heading */}
           <h2

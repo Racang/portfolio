@@ -172,11 +172,19 @@ export default function ProjectsSlider() {
               >
                 {/* ── Left: card + blob ─────────────────────── */}
                 <div
-                  className="relative shrink-0 w-full md:w-auto"
-                  style={{ width: 'clamp(240px, 32vw, 460px)', maxWidth: '100%' }}
+                  className="relative shrink-0 w-full md:w-[clamp(240px,32vw,460px)]"
                 >
+                  {/* Mobile blob — centered tight behind card per Figma mobile proportions */}
                   <div
-                    className="absolute pointer-events-none select-none z-0"
+                    className="md:hidden absolute pointer-events-none select-none z-0"
+                    style={{ top: '-7%', left: '2%', width: '93%', aspectRatio: '533 / 475' }}
+                  >
+                    <img src={p.bg} alt="" aria-hidden="true" className="w-full h-full object-contain" />
+                  </div>
+
+                  {/* Desktop blob — extends beyond card edges */}
+                  <div
+                    className="hidden md:block absolute pointer-events-none select-none z-0"
                     style={{ top: '-18%', left: '-18%', width: '116%', aspectRatio: '533 / 475' }}
                   >
                     <img src={p.bg} alt="" aria-hidden="true" className="w-full h-full object-contain" />

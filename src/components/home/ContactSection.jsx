@@ -69,12 +69,22 @@ export default function ContactSection() {
       className="relative w-full z-10"
       aria-label="Contact"
     >
-      {/* ── Desktop background image ── */}
-      <img
-        src={homeImages.contactBg}
-        alt=""
+      {/* ── Desktop background — two independent layers ── */}
+      {/* Layer 1: wave curve (1442×190 viewBox) — proportional, never stretched */}
+      <div
+        className="hidden md:block absolute top-0 inset-x-0 pointer-events-none select-none z-[1]"
+        style={{ height: 'calc(100vw * 190 / 1442)' }}
         aria-hidden="true"
-        className="hidden md:block absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
+      >
+        <svg className="w-full h-full block" viewBox="0 0 1442 190" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M326.633 50.7966C194.575 89.5141 53.8534 82.5622 0 74.2466V190H1442V22.3571C1311.14 103.372 1184.19 98.2164 1083.26 92.7576C1064.22 91.728 1046.11 90.6877 1029.07 90.2126C1017.56 89.8918 1004.77 88.599 990.936 86.5498C892.301 71.9378 740.733 18.8644 624.666 5.43721C572.084 -3.10052 526.158 0.291903 509.768 3.05533C475.408 7.51094 429.867 20.5298 326.633 50.7966Z" fill="#F8E9E6"/>
+        </svg>
+      </div>
+      {/* Layer 2: solid pink fill — covers from wave bottom to section bottom */}
+      <div
+        className="hidden md:block absolute inset-x-0 bottom-0 pointer-events-none select-none z-0 bg-[#F8E9E6]"
+        style={{ top: 'calc(100vw * 190 / 1442 - 2px)' }}
+        aria-hidden="true"
       />
 
       {/* ── Mobile: wave transition + solid pink bg ── */}
