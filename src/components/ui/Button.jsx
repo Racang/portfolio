@@ -57,7 +57,7 @@ export default function Button({ variant = 'filled', href, to, children, classNa
         {...handlers}
         className={[
           'relative inline-flex items-center gap-[8px] overflow-hidden',
-          'h-[50px] pl-[24px] pr-[8px] py-[14px]',
+          'pl-[24px] pr-[8px] py-[6px] md:py-[6px]',
           'rounded-[28px] shrink-0',
           'cursor-pointer select-none outline-none',
           'bg-[#FF797E]',
@@ -82,7 +82,7 @@ export default function Button({ variant = 'filled', href, to, children, classNa
 
         {/* Label */}
         <span
-          className="relative z-10 font-fredoka font-medium text-[22px] text-white leading-none whitespace-nowrap shrink-0"
+          className="relative z-10 font-fredoka font-medium text-[18px] md:text-[20px] text-white leading-none whitespace-nowrap shrink-0"
           style={{ fontVariationSettings: "'wdth' 100" }}
         >
           {children}
@@ -90,7 +90,7 @@ export default function Button({ variant = 'filled', href, to, children, classNa
 
         {/* Icon circle */}
         <motion.span
-          className="relative z-10 inline-flex items-center justify-center shrink-0 w-[40px] h-[40px] rounded-[26px]"
+          className="relative z-10 inline-flex items-center justify-center shrink-0 w-[30px] h-[30px] md:w-[40px] md:h-[40px] rounded-full"
           animate={{ backgroundColor: isInteract ? '#ffffff' : '#FFAFB3' }}
           transition={TRANS}
         >
@@ -98,7 +98,7 @@ export default function Button({ variant = 'filled', href, to, children, classNa
             src={isInteract ? ARROW_CORAL : ARROW_WHITE}
             alt=""
             aria-hidden="true"
-            className="w-[7.5px] h-[15.8px]"
+            className="w-[5.5px] h-[11px] md:w-[7.5px] md:h-[15.8px]"
           />
         </motion.span>
       </MotionTag>
@@ -124,7 +124,7 @@ export default function Button({ variant = 'filled', href, to, children, classNa
     >
       {/* Label */}
       <motion.span
-        className="font-fredoka font-medium text-[22px] leading-none whitespace-nowrap shrink-0"
+        className="font-fredoka font-medium text-[18px] md:text-[20px] leading-none whitespace-nowrap shrink-0"
         style={{ fontVariationSettings: "'wdth' 100" }}
         animate={{ color: isHover ? '#F27378' : '#FF797E' }}
         transition={TRANS}
@@ -138,7 +138,7 @@ export default function Button({ variant = 'filled', href, to, children, classNa
           src={ARROW_CORAL}
           alt=""
           aria-hidden="true"
-          className="w-[7.5px] h-[15.8px]"
+            className="w-[5.5px] h-[11px] md:w-[7.5px] md:h-[15.8px]"
         />
       </span>
     </MotionTag>

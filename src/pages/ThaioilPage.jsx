@@ -1,16 +1,19 @@
 /**
- * TostemPage — project case-study page for "Tostem Cooperate Website".
- * Structure mirrors GenaPage: cream intro section → wave divider → white content zone.
+ * ThaioilPage — project case-study page for "Thaioil Cooperate Website".
+ * Structure mirrors TostemPage: cream intro section → wave divider → white content zone.
  */
-import HomeNavbar      from '../components/home/HomeNavbar'
-import HomeFooter      from '../components/home/HomeFooter'
-import InnerPageBanner from '../components/shared/InnerPageBanner'
-import RoleInfoCard    from '../components/RoleInfoCard'
-import WhatIDid        from '../components/WhatIDid'
-import DesignDirection from '../components/DesignDirection'
-import FinalUI         from '../components/FinalUI'
+import HomeNavbar             from '../components/home/HomeNavbar'
+import HomeFooter             from '../components/home/HomeFooter'
+import InnerPageBanner        from '../components/shared/InnerPageBanner'
+import ThaioilRoleInfoCard    from '../components/thaioil/ThaioilRoleInfoCard'
+import ThaioilWhatIDid        from '../components/thaioil/ThaioilWhatIDid'
+import ThaioilChallenge       from '../components/thaioil/ThaioilChallenge'
+import ThaioilUserRequirement from '../components/thaioil/ThaioilUserRequirement'
+import ThaioilDesignDirection from '../components/thaioil/ThaioilDesignDirection'
+import ThaioilPhase1          from '../components/thaioil/ThaioilPhase1'
+import ThaioilPhase2          from '../components/thaioil/ThaioilPhase2'
 
-export default function TostemPage() {
+export default function ThaioilPage() {
   return (
     <div className="bg-white relative overflow-x-hidden font-fredoka">
       {/* Shared floating pill nav */}
@@ -18,14 +21,14 @@ export default function TostemPage() {
 
       {/* ── 1. Banner — cream background ──────────────────────── */}
       <div className="relative z-10 flex flex-col w-full bg-[#FEFCF1]">
-        <InnerPageBanner title="Tostem" subtitle="Cooperate website" />
+        <InnerPageBanner title="Thaioil" subtitle="Cooperate website" />
       </div>
 
-      {/* ── 2. Intro section — cream bg + wave divider (mirrors Gena) ── */}
+      {/* ── 2. Intro section — cream bg + wave divider ──────────── */}
       <section aria-label="Project intro" className="relative w-full z-10 bg-[#FEFCF1]">
         <div className="relative z-10 flex flex-col w-full max-w-[1440px] mx-auto pb-[20px] lg:pb-[60px]">
-          <RoleInfoCard />
-          <WhatIDid />
+          <ThaioilRoleInfoCard />
+          <ThaioilWhatIDid />
         </div>
 
         {/* Wave divider — cream → white */}
@@ -38,8 +41,11 @@ export default function TostemPage() {
 
       {/* ── 3. Content zone — white background ────────────────── */}
       <div className="relative z-10 flex flex-col w-full max-w-[1440px] mx-auto">
-        <DesignDirection />
-        <FinalUI />
+        <ThaioilChallenge />
+        <ThaioilUserRequirement />
+        <ThaioilDesignDirection />
+        <ThaioilPhase1 />
+        <ThaioilPhase2 />
       </div>
 
       {/* Footer */}

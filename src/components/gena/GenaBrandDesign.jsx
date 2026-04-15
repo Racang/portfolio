@@ -1,16 +1,30 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { fadeUp, scaleIn, staggerContainer, viewportOnce } from '../../lib/animations';
 import { genaImages, genaContent } from '../../data/genaData';
 
 export default function GenaBrandDesign() {
   return (
     <div className="content-stretch flex flex-col gap-[44px] items-center p-[40px] lg:p-[80px] relative shrink-0 w-full z-10">
-      <div className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 text-grey-800 w-full max-w-[798px]">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 text-grey-800 w-full max-w-[798px]"
+      >
         <h2 className="font-fredoka font-semibold text-section-title relative shrink-0 text-center w-full" style={{ fontVariationSettings: "'wdth' 100" }}>{genaContent.brandDesign.title}</h2>
-      </div>
+      </motion.div>
       
-      <div className="grid grid-cols-3 gap-[30px] lg:gap-[48px] max-[1023px]:grid-cols-1 max-[1023px]:justify-items-start relative shrink-0 w-full">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        className="grid grid-cols-3 gap-[30px] lg:gap-[48px] max-[1023px]:grid-cols-1 max-[1023px]:justify-items-start relative shrink-0 w-full"
+      >
         {/* Box 1 */}
-        <div className="content-stretch flex flex-col gap-[16px] items-start w-full relative">
+        <motion.div variants={scaleIn} whileHover={{ y: -4 }} className="content-stretch flex flex-col gap-[16px] items-start w-full relative">
           <div className="bg-white border border-[#e7e8ed] border-solid content-stretch flex flex-col items-start p-[16px] relative rounded-[16px] shadow-grey-card shrink-0 w-full max-[1023px]:max-w-[630px]">
             <div className="aspect-[400/300] relative rounded-[16px] shrink-0 w-full">
               <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={genaImages.imgRectangle82741} />
@@ -22,10 +36,10 @@ export default function GenaBrandDesign() {
               <p className="text-body mb-0">{genaContent.brandDesign.boxes[0].desc}</p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Box 2 */}
-        <div className="content-stretch flex flex-col gap-[16px] items-start w-full relative">
+        <motion.div variants={scaleIn} whileHover={{ y: -4 }} className="content-stretch flex flex-col gap-[16px] items-start w-full relative">
           <div className="bg-white border border-[#e7e8ed] border-solid content-stretch flex flex-col items-start p-[16px] relative rounded-[16px] shadow-[0px_3px_16px_0px_rgba(24,74,234,0.09)] shrink-0 w-full max-[1023px]:max-w-[630px]">
             <div className="aspect-[361/270.75] relative rounded-[16px] shrink-0 w-full">
               <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[16px]">
@@ -40,10 +54,10 @@ export default function GenaBrandDesign() {
               <p className="text-body mb-0">{genaContent.brandDesign.boxes[1].desc}</p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Box 3 */}
-        <div className="content-stretch flex flex-col gap-[16px] items-start w-full relative">
+        <motion.div variants={scaleIn} whileHover={{ y: -4 }} className="content-stretch flex flex-col gap-[16px] items-start w-full relative">
           <div className="bg-white border border-[#e7e8ed] border-solid content-stretch flex flex-col items-start p-[16px] relative rounded-[16px] shadow-[0px_3px_16px_0px_rgba(24,74,234,0.09)] shrink-0 w-full max-[1023px]:max-w-[630px]">
             <div className="aspect-[400/300] relative rounded-[16px] shrink-0 w-full">
                 <div className="absolute bg-white inset-0 rounded-[16px]" />
@@ -58,8 +72,8 @@ export default function GenaBrandDesign() {
               <p className="text-body mb-0">{genaContent.brandDesign.boxes[2].desc}</p>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }

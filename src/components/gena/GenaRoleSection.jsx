@@ -1,10 +1,18 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { fadeUp, viewportOnce } from '../../lib/animations';
 import { genaImages, genaContent } from '../../data/genaData';
 
 export default function GenaRoleSection({ className }) {
   return (
     <div className="content-stretch flex flex-col items-center overflow-clip px-[40px] lg:px-[213px] py-[37px] relative shrink-0 w-full z-10">
-      <div className={className || "bg-white flex flex-wrap max-[1279px]:flex-col gap-[60px] max-[1279px]:gap-[40px] items-center justify-center px-[40px] py-[36px] relative rounded-[80px] shadow-grey-card shrink-0 max-w-[1014px] w-full"}>
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        className={className || "bg-white flex flex-wrap max-[1279px]:flex-col gap-[60px] max-[1279px]:gap-[40px] items-center justify-center px-[40px] py-[36px] relative rounded-[80px] shadow-grey-card shrink-0 max-w-[1014px] w-full"}
+      >
 
         {/* Icon with offset pink background */}
         <div className="flex gap-[10px] items-center relative shrink-0">
@@ -46,7 +54,7 @@ export default function GenaRoleSection({ className }) {
           </div>
         </div>
 
-      </div>
+      </motion.div>
     </div>
   );
 }

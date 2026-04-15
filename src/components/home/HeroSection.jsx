@@ -18,17 +18,17 @@ export default function HeroSection() {
     <section
       id="hero"
       className="relative w-full bg-bg-warm overflow-hidden"
-      style={{ minHeight: 'clamp(560px, 56vw, 800px)' }}
+      style={{ minHeight: 'clamp(480px, 56vw, 800px)' }}
       aria-label="Hero"
     >
       {/* ── Content grid ────────────────────────────────────────── */}
       <div
-        className="relative z-10 max-w-[1440px] mx-auto px-8 lg:px-20 flex items-center justify-between gap-8 lg:gap-12"
-        style={{ paddingTop: 'clamp(100px, 10vw, 160px)', paddingBottom: 'clamp(60px, 6vw, 100px)' }}
+        className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-8 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 lg:gap-12"
+        style={{ paddingTop: 'clamp(80px, 10vw, 160px)', paddingBottom: 'clamp(40px, 6vw, 100px)' }}
       >
         {/* ── Left: text ─────────────────────────────────────────── */}
         <motion.div
-          className="flex flex-col gap-8 shrink-0"
+          className="flex flex-col gap-6 md:gap-8 shrink-0 w-full md:w-auto text-center md:text-left items-center md:items-start"
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
@@ -37,7 +37,7 @@ export default function HeroSection() {
           <motion.p
             variants={fadeLeft}
             className="font-fredoka text-grey-800 leading-none"
-            style={{ fontSize: 'clamp(20px, 2.2vw, 32px)' }}
+            style={{ fontSize: 'clamp(18px, 2.2vw, 32px)' }}
           >
             Rachaya Angkanawin
           </motion.p>
@@ -50,7 +50,7 @@ export default function HeroSection() {
               style={{
                 top: '-55%',
                 right: '-2%',
-                width: 'clamp(56px, 7vw, 100px)',
+                width: 'clamp(40px, 7vw, 100px)',
                 zIndex: 0,
               }}
               variants={floatY}
@@ -65,9 +65,9 @@ export default function HeroSection() {
             </motion.div>
 
             <h1
-              className="relative font-fredoka font-medium text-cyan-accent leading-none whitespace-nowrap"
+              className="relative font-fredoka font-medium text-cyan-accent leading-none"
               style={{
-                fontSize: 'clamp(48px, 6.7vw, 96px)',
+                fontSize: 'clamp(42px, 6.7vw, 96px)',
                 fontVariationSettings: "'wdth' 100",
                 zIndex: 10,
               }}
@@ -77,7 +77,7 @@ export default function HeroSection() {
           </motion.div>
 
           {/* Buttons */}
-          <motion.div variants={fadeLeft} className="flex gap-6 flex-wrap items-center">
+          <motion.div variants={fadeLeft} className="flex gap-4 md:gap-6 flex-wrap items-center justify-center md:justify-start">
             <Button
               href={`${import.meta.env.BASE_URL}resume.pdf`}
               target="_blank"
@@ -99,12 +99,13 @@ export default function HeroSection() {
           </motion.div>
         </motion.div>
 
-        {/* ── Right: character illustration ──────────────────────── */}
+        {/* ── Right: character illustration — hidden on mobile (<768px) ─── */}
         <motion.div
-          className="relative shrink-0 self-end hidden md:block"
+          className="relative shrink-0 self-end w-full md:w-auto hidden md:block"
           style={{
-            width:  'clamp(300px, 43.7vw, 629px)',
-            height: 'clamp(240px, 28vw, 404px)',
+            width:  'clamp(220px, 43.7vw, 629px)',
+            height: 'clamp(176px, 28vw, 404px)',
+            maxWidth: '100%',
           }}
           variants={fadeRight}
           initial="hidden"

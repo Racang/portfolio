@@ -28,6 +28,7 @@ export const homeImages = {
   arrowIcon:      `${base}images/ba43d650bfed32aa6b7ab5060c5502ff9a78caf1.svg`,
 
   // Contact section
+  contactMobileWave: `${base}images/contact-wave-top.svg`,                          // Mobile-only top wave for contact section (375×67)
   contactBg:      `${base}images/Home_Contact_bg.png`,                              // Contact section background (2884×1808)
   contactDecor1:  `${base}images/f53a4115a5ea688effd30d31ccb3f541b17bfe9b.svg`,  // Group 1686550951
   contactDecor2:  `${base}images/d8d51d09e8c86ac0a3af4d346a3862fa8992373c.svg`,  // Group 1686550954
@@ -55,7 +56,7 @@ export const projects = [
     logoWidth: 94,
     logoHeight: 32,
     bg: `${base}images/276d284c7b94f43c48fb1408800736182d5e73b0.svg`,
-    thumb: `${base}images/370e63fe7d2841d62f2c5d5ca14e77d2e9ca1582.png`,
+    thumb: `${base}images/Project_Gena_Cover.png`,
   },
   {
     id: 2,
@@ -67,7 +68,7 @@ export const projects = [
     logoWidth: 85,
     logoHeight: 29,
     bg: `${base}images/f32b7e5efce31beca23a6f41fdadc12d3deebc46.svg`,
-    thumb: `${base}images/370e63fe7d2841d62f2c5d5ca14e77d2e9ca1582.png`,
+    thumb: `${base}images/Project_Irpc_Cover.png`,
   },
   {
     id: 3,
@@ -79,7 +80,7 @@ export const projects = [
     logoWidth: 68,
     logoHeight: 32,
     bg: `${base}images/f5e9a9fe4d900347d615af538ef51d5e07683632.svg`,
-    thumb: `${base}images/370e63fe7d2841d62f2c5d5ca14e77d2e9ca1582.png`,
+    thumb: `${base}images/Project_Thaioil_Cover.png`,
   },
   {
     id: 4,
@@ -91,7 +92,7 @@ export const projects = [
     logoWidth: 85,
     logoHeight: 32,
     bg: `${base}images/2c86e06537308ef68b0a5345025d22e0da47bcd8.svg`,
-    thumb: `${base}images/370e63fe7d2841d62f2c5d5ca14e77d2e9ca1582.png`,
+    thumb: `${base}images/Project_Tostem_Cover.png`,
   },
 ]
 

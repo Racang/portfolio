@@ -1,10 +1,7 @@
 import { motion } from 'framer-motion'
-import { fadeUp, scaleIn, staggerContainer, viewportOnce } from '../lib/animations'
-import { images, finalUIScreens } from '../data/mockData'
+import { fadeUp, scaleIn, staggerContainer, viewportOnce } from '../../lib/animations'
+import { thaioilImages, thaioilPhase1Screens } from '../../data/thaioilData'
 
-/**
- * Reusable screenshot card used in the Phase I grid.
- */
 function ScreenCard({ src, alt, aspectClass = 'aspect-video' }) {
   return (
     <motion.div
@@ -14,22 +11,18 @@ function ScreenCard({ src, alt, aspectClass = 'aspect-video' }) {
       <img
         src={src}
         alt={alt}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover object-top"
         loading="lazy"
       />
     </motion.div>
   )
 }
 
-/**
- * Phase I Final UI section.
- * Matches Gena section spacing: px-[40px] lg:px-[80px] py-[64px].
- */
-export default function FinalUI() {
+export default function ThaioilPhase1() {
   return (
     <section
       className="content-stretch flex flex-col gap-[44px] items-center px-[40px] lg:px-[80px] py-[64px] relative shrink-0 w-full z-10"
-      aria-labelledby="final-ui-heading"
+      aria-labelledby="thaioil-phase1-heading"
     >
       {/* ── Header ─────────────────────────────────────────── */}
       <motion.div
@@ -40,17 +33,17 @@ export default function FinalUI() {
         className="content-stretch flex flex-col gap-[24px] items-center relative shrink-0 text-grey-800 w-full max-w-[798px] text-center"
       >
         <h2
-          id="final-ui-heading"
+          id="thaioil-phase1-heading"
           className="font-fredoka font-semibold text-section-title w-full"
           style={{ fontVariationSettings: "'wdth' 100" }}
         >
-          User Interface Design
+          Phase1 - General UI Design
         </h2>
         <p
           className="font-normal text-body w-full text-grey-700"
           style={{ fontVariationSettings: "'wdth' 100" }}
         >
-          The client selected Directions 1 and 2, requesting that the color palette remain aligned with the brand's CI while adopting the more creative layout style from Direction 2. Based on this feedback, I refined the screen design with a modern layout approach, using black, gray, and white as the primary color scheme.
+          After the client selected Direction 3, they requested a more dynamic visual direction, along with a brighter color palette adapted from the brand CI. Based on this direction, we established the design system and began designing selected UI sections to help the client visualize the overall design approach.
         </p>
       </motion.div>
 
@@ -62,10 +55,10 @@ export default function FinalUI() {
         viewport={viewportOnce}
         className="flex flex-col gap-[40px] w-full"
       >
-        {finalUIScreens.map(({ key, alt, aspectClass }) => (
+        {thaioilPhase1Screens.map(({ imgKey, alt, aspectClass }) => (
           <ScreenCard
-            key={key}
-            src={images[key]}
+            key={imgKey}
+            src={thaioilImages[imgKey]}
             alt={alt}
             aspectClass={aspectClass}
           />
