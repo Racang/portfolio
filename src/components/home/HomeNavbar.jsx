@@ -83,8 +83,8 @@ export default function HomeNavbar() {
       {/* Shared container — matches hero section padding */}
       <div className="max-w-[1440px] mx-auto px-8 lg:px-20 flex items-start justify-center">
 
-        {/* ── Mobile / tablet: hamburger (< lg), anchored to left edge ── */}
-        <div ref={navRef} className="pointer-events-auto lg:hidden mr-auto flex flex-col items-start">
+        {/* ── Hamburger menu (< 768px), anchored to left edge ── */}
+        <div ref={navRef} className="pointer-events-auto md:hidden mr-auto flex flex-col items-start">
           {/* Pill toggle */}
           <button
             onClick={() => setIsOpen((prev) => !prev)}
@@ -130,9 +130,9 @@ export default function HomeNavbar() {
           </AnimatePresence>
         </div>
 
-        {/* ── Desktop: centered horizontal pill (lg+) ── */}
+        {/* ── Full navigation (≥ 768px) ── */}
         <nav
-          className="pointer-events-auto hidden lg:flex gap-1 items-center p-3 rounded-pill border border-white shadow-glass-nav"
+          className="pointer-events-auto hidden md:flex gap-1 items-center p-3 rounded-pill border border-white shadow-glass-nav"
           style={glassStyle}
           aria-label="Main navigation"
         >
