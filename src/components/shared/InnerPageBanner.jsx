@@ -22,7 +22,7 @@ export default function InnerPageBanner({ title, subtitle }) {
       aria-label={`${title} banner`}
     >
       <div 
-        className="w-full h-[431px] max-[425px]:h-[296px] pt-[98px] max-[425px]:pt-0 bg-[#F7F3F3] flex flex-col items-center justify-center text-center z-10"
+        className="w-full h-[431px] max-md:h-[296px] pt-[98px] max-md:pt-0 bg-[#F7F3F3] flex flex-col items-center justify-center text-center z-10"
       >
         <motion.div
           initial="hidden"

@@ -10,21 +10,17 @@
       href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Noto+Sans+Thai:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    
+    <!-- GitHub Pages 404 redirect script -->
+    <script>
+      // Store the current path before redirect
+      sessionStorage.redirect = location.href;
+    </script>
+    <!-- Immediately redirect to index.html -->
+    <meta http-equiv="refresh" content="0;URL='/portfolio/'">
   </head>
   <body>
     <div id="root"></div>
-    
-    <!-- GitHub Pages redirect recovery script -->
-    <script>
-      (function() {
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect !== location.href) {
-          history.replaceState(null, null, redirect);
-        }
-      })();
-    </script>
-    
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
