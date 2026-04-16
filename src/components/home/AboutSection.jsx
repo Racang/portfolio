@@ -146,7 +146,7 @@ export default function AboutSection() {
           </motion.div>
 
           <div className="pt-2 flex justify-center md:justify-start">
-            <Button href="#contact" variant="filled">
+            <Button to="/about" variant="filled">
               About&nbsp;&nbsp;Me
             </Button>
           </div>
