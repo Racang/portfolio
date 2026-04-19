@@ -70,7 +70,7 @@ export default function AboutSection() {
 
       {/* ── Content ───────────────────────────────────────────── */}
       <motion.div
-        className="relative z-10 max-w-[1440px] mx-auto px-8 md:px-8 lg:px-20 flex flex-col md:flex-row items-center gap-6 md:gap-10 lg:gap-20 h-full"
+        className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-8 lg:px-20 flex flex-col md:flex-row items-center gap-6 md:gap-10 lg:gap-20 h-full"
         style={{
           paddingTop: 'clamp(96px, 8.3vw, 120px)',
           paddingBottom: 'clamp(80px, 9.7vw, 140px)',

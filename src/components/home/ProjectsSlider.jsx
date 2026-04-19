@@ -20,12 +20,10 @@ export default function ProjectsSlider() {
   const [current,  setCurrent]  = useState(0)
   const [slotPx,   setSlotPx]   = useState(0)
   const total        = projects.length
-  const sectionRef   = useRef(null)
   const trackRef     = useRef(null)
   const currentRef   = useRef(current)
   const slotPxRef    = useRef(0)       // mirrors slotPx for imperative animate calls
   const animatingRef = useRef(false)   // prevents overlapping transitions
-  const wheelLock    = useRef(false)
   const pointerStart = useRef(null)
   const x            = useMotionValue(0)
 
@@ -81,22 +79,6 @@ export default function ProjectsSlider() {
     return () => window.removeEventListener('resize', measure)
   }, [])
 
-  // Horizontal mouse-wheel — needs passive:false to preventDefault
-  useEffect(() => {
-    const el = sectionRef.current
-    if (!el) return
-    const onWheel = (e) => {
-      if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) return  // ignore vertical
-      if (wheelLock.current) return
-      e.preventDefault()
-      wheelLock.current = true
-      if (e.deltaX > 0) next(); else prev()
-      setTimeout(() => { wheelLock.current = false }, 1000)
-    }
-    el.addEventListener('wheel', onWheel, { passive: false })
-    return () => el.removeEventListener('wheel', onWheel)
-  }, [next, prev])
-
   // Pointer-based drag/swipe
   const onPointerDown = (e) => {
     pointerStart.current = { x: e.clientX, y: e.clientY }
@@ -114,7 +96,6 @@ export default function ProjectsSlider() {
 
   return (
     <section
-      ref={sectionRef}
       id="projects"
       className="relative w-full bg-white overflow-hidden select-none z-0"
       style={{

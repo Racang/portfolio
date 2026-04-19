@@ -81,7 +81,7 @@ export default function HomeNavbar() {
   return (
     <div className="fixed top-6 left-0 right-0 z-50 pointer-events-none">
       {/* Shared container — matches hero section padding */}
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-20 flex items-start justify-center">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-20 flex items-start justify-center">
 
         {/* ── Hamburger menu (< 768px), anchored to left edge ── */}
         <div ref={navRef} className="pointer-events-auto md:hidden mr-auto flex flex-col items-start">
