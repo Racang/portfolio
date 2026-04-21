@@ -17,7 +17,14 @@ export const genaImages = {
 
   // Main visual assets
   imgImage:      `${base}gena/86066520aadbfe8c77dcc2a3285d5d5892de2b11.png`, // Main hero visual block
-  imgImage1899:  `${base}gena/836ee22e7302d13e324a18b589d39d7b97988ed6.png`, // Context visual graphic
+  imgImage1899:  `${base}gena/836ee22e7302d13e324a18b589d39d7b97988ed6.png`, // Context visual graphic (legacy)
+  imgPG05:       `${base}gena/P_G05.png`, // Background section hero image
+
+  // ─── Interface Showcase ────────────────────────────────────────────────────
+  imgGenaAgent01: `${base}gena/Product_gena_agent01_1.png`, // AI agent list view (wide)
+  imgGenaAgent02: `${base}gena/Product_gena_agent02_1.png`, // Create agent form (tall)
+  imgGenaAgent03: `${base}gena/Product_gena_agent03_1.png`, // AI agent list 2 (wide)
+  imgGenaAgent04: `${base}gena/Product_gena_agent04_1.png`, // Create agent form 2 (tall)
 
   // ─── Work Process Flowchart Block ────────────────────────────────────────────────
   imgWorkProcess: `${base}gena/Work_Process02.png`, // Work process flowchart
