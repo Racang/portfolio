@@ -9,36 +9,36 @@ export const thaioilImages = {
   computerIcon: `${base}gena/db2f04457f0b478674721c461038ac1b4e33e4a9.png`,
 
   // WhatIDid — hero screenshot
-  uiHomepage: 'https://www.figma.com/api/mcp/asset/87d0d095-81a6-4572-9289-1ab2548a4ad0',
+  uiHomepage: `${base}images/Project_Thaioil01.png`,
 
   // Challenge section icons
   challengeIcon1: `${base}images/Project_thaioil_ChallengeIcon01.png`, // Temporary — reuse IRPC challenge icon
   challengeIcon2: `${base}images/Project_thaioil_ChallengeIcon02.png`, // Temporary — reuse IRPC challenge iconm
   // User Requirement illustration
-  requirementIllustration: 'https://www.figma.com/api/mcp/asset/eeb8533d-e6f3-4f00-abfb-e380198d4369',
+  requirementIllustration: `${base}images/Project_THAIOIL02.png`,
 
   // Design Direction — 3 full-page mockups
-  direction1: 'https://www.figma.com/api/mcp/asset/61bf3d3d-7546-4b31-aa60-cb355c8c6a63',
-  direction2: 'https://www.figma.com/api/mcp/asset/0b91c1ba-24c9-427b-9949-28393814eae9',
-  direction3: 'https://www.figma.com/api/mcp/asset/9a592c75-fc65-4608-9be2-a2919c616655',
+  direction1: `${base}images/Project_THAIOIL03.png`,
+  direction2: `${base}images/Project_THAIOIL04.png`,
+  direction3: `${base}images/Project_THAIOIL05.png`,
 
   // Phase 1 — General UI Design screens
-  phase1StyleGuide:  'https://www.figma.com/api/mcp/asset/b212a8f7-8d06-4cd4-ae23-d9873686fb58',
-  phase1Home:        'https://www.figma.com/api/mcp/asset/a0d6ad87-dede-466c-8a09-e10a1fa7ecdc',
-  phase1News2:       'https://www.figma.com/api/mcp/asset/9c6c38cc-da70-4622-ba36-b95d1bfa22b5',
-  phase1About:       'https://www.figma.com/api/mcp/asset/387189d6-fb66-4eac-b5a4-cf8e0434241f',
-  phase1News1:       'https://www.figma.com/api/mcp/asset/cbc9adc1-652d-4fa1-a4b9-e80d267b7445',
-  phase1News3:       'https://www.figma.com/api/mcp/asset/3066cc85-6b83-4234-a555-0a747923a4f9',
-  phase1News4:       'https://www.figma.com/api/mcp/asset/8ec5e79a-70e8-4891-a3e8-212ab1b2cfa3',
-  phase1News5:       'https://www.figma.com/api/mcp/asset/e32a81df-94f6-44f1-930e-77f5ca0cabf1',
-  phase1News6:       'https://www.figma.com/api/mcp/asset/f9e3f2eb-fb79-47d0-97f1-c1f8ecceee79',
-  phase1News7:       'https://www.figma.com/api/mcp/asset/f85c4300-aada-44ae-945f-a912e073fec6',
-  phase1News8:       'https://www.figma.com/api/mcp/asset/596e63b1-0f4d-461d-95ab-474fbb217a17',
-  phase1StyleGuide2: 'https://www.figma.com/api/mcp/asset/94120ff8-04fc-44f3-a7eb-7951e639ed64',
+  phase1StyleGuide:  `${base}images/Project_THAIOIL06.png`,
+  phase1Home:        `${base}images/Project_THAIOIL07.png`,
+  phase1News2:       `${base}images/Project_THAIOIL08.png`,
+  phase1About:       `${base}images/Project_THAIOIL09.png`,
+  phase1News1:       `${base}images/Project_THAIOIL10.png`,
+  phase1News3:       `${base}images/Project_THAIOIL11.png`,
+  phase1News4:       `${base}images/Project_THAIOIL12.png`,
+  phase1News5:       `${base}images/Project_THAIOIL13.png`,
+  phase1News6:       `${base}images/Project_THAIOIL14.png`,
+  phase1News7:       `${base}images/Project_THAIOIL15.png`,
+  phase1News8:       `${base}images/Project_THAIOIL16.png`,
+  phase1StyleGuide2: `${base}images/Project_THAIOIL17.png`,
 
   // Phase 2 — Content Template screens
-  phase2Screen1: 'https://www.figma.com/api/mcp/asset/4d223b63-c288-4f65-b011-fb4be9232b52',
-  phase2Screen2: 'https://www.figma.com/api/mcp/asset/ee65faf5-d055-4b5d-bde0-10a355524b23',
+  phase2Screen1: `${base}images/Project_THAIOIL18.png`,
+  phase2Screen2: `${base}images/Project_THAIOIL19.png`,
 }
 
 // ─── Project metadata ────────────────────────────────────────────────────────
