@@ -12,7 +12,7 @@ function StatColumn({ label, children }) {
         {label}
       </span>
       <div
-        className="font-fredoka font-normal text-body text-grey-700"
+        className="font-fredoka font-normal text-body max-sm:text-[20px] max-sm:leading-[1.6] text-grey-700"
         style={{ fontVariationSettings: "'wdth' 100" }}
       >
         {children}
@@ -24,11 +24,11 @@ function StatColumn({ label, children }) {
 export default function IrpcRoleInfoCard() {
   return (
     <div
-      className="content-stretch flex flex-col items-center overflow-clip px-[40px] lg:px-[213px] py-[37px] relative shrink-0 w-full z-10"
+      className="content-stretch flex flex-col items-center overflow-clip px-[40px] max-sm:px-[24px] lg:px-[213px] py-[37px] max-sm:pt-[48px] max-sm:pb-[30px] relative shrink-0 w-full z-10"
       aria-label="Project information"
     >
       <motion.div
-        className="bg-white flex flex-wrap max-[1279px]:flex-col gap-[60px] max-[1279px]:gap-[40px] items-center justify-center px-[40px] py-[36px] relative rounded-[80px] shadow-grey-card shrink-0 max-w-[1014px] w-full"
+        className="bg-white flex flex-wrap max-[1279px]:flex-col gap-[60px] max-[1279px]:gap-[40px] items-center justify-center px-[40px] max-sm:px-[24px] py-[36px] max-sm:py-[24px] relative rounded-[80px] max-sm:rounded-[24px] shadow-grey-card shrink-0 max-w-[1014px] w-full"
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
@@ -48,17 +48,17 @@ export default function IrpcRoleInfoCard() {
         </div>
 
         {/* Metadata columns */}
-        <div className="content-start flex flex-wrap max-[1279px]:flex-col gap-[48px] max-[1279px]:gap-[24px] items-start relative shrink-0 max-[1279px]:w-full">
+        <div className="content-start flex flex-wrap max-[1279px]:flex-col gap-[48px] max-[1279px]:gap-[24px] max-sm:gap-[16px] items-start relative shrink-0 max-[1279px]:w-full">
           <StatColumn label="Duration:">
             <p>{irpcInfo.duration}</p>
-            <p className="text-[16px] leading-[1.3] text-[#6e7390]">{irpcInfo.period}</p>
+            <p className="text-[16px] max-sm:text-[18px] leading-[1.3] text-[#6e7390]">{irpcInfo.period}</p>
           </StatColumn>
           <StatColumn label="Platform">
             <p>{irpcInfo.platform}</p>
           </StatColumn>
           <StatColumn label="Role">
             <p>{irpcInfo.role}</p>
-            <p className="text-[16px] leading-[1.3] text-[#6e7390]">{irpcInfo.roleNote}</p>
+            <p className="text-[16px] max-sm:text-[18px] leading-[1.3] text-[#6e7390]">{irpcInfo.roleNote}</p>
           </StatColumn>
         </div>
       </motion.div>

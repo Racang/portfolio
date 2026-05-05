@@ -5,7 +5,7 @@ import { irpcImages, irpcDirections, irpcDesignDirectionSubtitleParts } from '..
 export default function IrpcDesignDirection() {
   return (
     <section
-      className="content-stretch flex flex-col gap-[44px] items-center px-[40px] lg:px-[80px] py-[64px] relative shrink-0 w-full z-10"
+      className="content-stretch flex flex-col gap-[44px] max-sm:gap-[28px] items-center px-[40px] max-sm:px-[24px] lg:px-[80px] py-[64px] max-sm:py-[30px] relative shrink-0 w-full z-10"
       aria-labelledby="irpc-direction-heading"
     >
       {/* ── Header ────────────────────────────────────────── */}
@@ -24,7 +24,7 @@ export default function IrpcDesignDirection() {
           Design Direction
         </h2>
         <p
-          className="font-normal text-body w-full text-grey-700"
+          className="font-normal text-body max-sm:text-[18px] max-sm:leading-[1.4] w-full text-grey-700"
           style={{ fontVariationSettings: "'wdth' 100" }}
         >
           {irpcDesignDirectionSubtitleParts.map(({ text, bold }, i) =>
@@ -66,16 +66,16 @@ export default function IrpcDesignDirection() {
             key={imgKey}
             variants={fadeUp}
             whileHover={{ y: -4, transition: { duration: 0.2, ease: 'easeOut' } }}
-            className="flex flex-col gap-[10px] w-full max-w-[630px] mx-auto lg:max-w-none"
+            className="flex flex-col gap-[10px] max-sm:gap-[8px] w-full max-w-[630px] mx-auto lg:max-w-none"
           >
             {/* Label — all reserved to 2 lines so images start at same position */}
             <p
-              className="font-fredoka font-medium text-[clamp(14px,_1.4vw,_18px)] leading-[1.3] text-[#001e7f] w-full min-h-[2.6em] max-[1420px]:min-h-[3.9em]"
+              className="font-fredoka font-medium text-[clamp(14px,_1.4vw,_18px)] max-sm:text-[18px] leading-[1.3] text-[#001e7f] w-full min-h-[2.6em] max-[1420px]:min-h-[3.9em] max-sm:min-h-0"
               style={{ fontVariationSettings: "'wdth' 100" }}
             >
               <span className="font-medium">{labelBold}</span>
               {hasBreak && <br />}
-              <span className="font-normal">{labelLight}</span>
+              <span className="font-normal max-sm:text-[18px] max-sm:leading-[1.4]">{labelLight}</span>
             </p>
             {/* Image — fixed aspect ratio matches Figma equal-height intent */}
             <div className="bg-white rounded-[8px] shadow-grey-card overflow-hidden aspect-[399/1427]">

@@ -13,7 +13,7 @@ export const irpcImages = {
   uiHomepage:       `${base}images/IRPC_UI_Homepage_1.png`,
 
   // Challenge icon
-  challengeIcon:    `${base}images/Challenge_Icon.png`,
+  challengeIcon:    `${base}images/ChallengeIcon.png`,
 
   // Proposal Design Direction — left image (both directions composite)
   proposalImage:    `${base}images/Project_IRPC02.png`,

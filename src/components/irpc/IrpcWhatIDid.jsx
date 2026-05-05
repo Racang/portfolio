@@ -5,7 +5,7 @@ import { irpcImages, irpcWhatIDid } from '../../data/irpcData'
 function BulletLine({ parts }) {
   return (
     <p
-      className="mb-2 text-body font-fredoka font-normal text-grey-700"
+      className="mb-2 text-body font-fredoka font-normal text-grey-700 max-sm:text-[18px] max-sm:leading-[1.9]"
       style={{ fontVariationSettings: "'wdth' 100" }}
     >
       <span className="leading-[1.9]">{'· '}</span>
@@ -23,7 +23,7 @@ function BulletLine({ parts }) {
 export default function IrpcWhatIDid() {
   return (
     <motion.section
-      className="content-center flex flex-wrap max-lg:flex-col gap-[40px] items-center max-lg:items-start px-[40px] lg:px-[80px] py-[64px] relative shrink-0 w-full z-10"
+      className="content-center flex flex-wrap max-lg:flex-col gap-[40px] max-sm:gap-[32px] items-center max-lg:items-start px-[40px] max-sm:px-[24px] lg:px-[80px] py-[64px] max-sm:pt-[30px] max-sm:pb-[48px] relative shrink-0 w-full z-10"
       aria-labelledby="irpc-what-i-did-heading"
       variants={staggerContainer}
       initial="hidden"
@@ -35,7 +35,7 @@ export default function IrpcWhatIDid() {
         <div className="content-stretch flex flex-col gap-[24px] items-start max-w-[500px] relative shrink-0 w-full">
           <h2
             id="irpc-what-i-did-heading"
-            className="font-fredoka font-semibold text-section-title relative shrink-0 text-grey-800 w-full"
+            className="font-fredoka font-semibold text-section-title relative shrink-0 text-grey-800 w-full max-sm:text-center"
             style={{ fontVariationSettings: "'wdth' 100" }}
           >
             What I did
@@ -51,7 +51,7 @@ export default function IrpcWhatIDid() {
       {/* ── Right: UI screenshot ────────────────────────────── */}
       <motion.div
         variants={fadeRight}
-        className="flex-[1_0_0] max-lg:flex-none max-lg:w-full max-lg:max-w-[585px] relative aspect-[585/671] rounded-[24px] shadow-card-dark overflow-hidden"
+        className="flex-[1_0_0] max-lg:flex-none max-lg:w-full max-lg:max-w-[585px] max-sm:max-w-none relative aspect-[585/671] max-sm:aspect-[327/376] rounded-[24px] max-sm:rounded-[12px] shadow-card-dark overflow-hidden"
         aria-label="IRPC homepage UI screenshot"
       >
         <img

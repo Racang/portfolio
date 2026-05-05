@@ -21,7 +21,7 @@ function ScreenCard({ src, alt, aspectClass = 'aspect-video' }) {
 export default function IrpcPhase1() {
   return (
     <section
-      className="content-stretch flex flex-col gap-[44px] items-center px-[40px] lg:px-[80px] py-[64px] relative shrink-0 w-full z-10"
+      className="content-stretch flex flex-col gap-[44px] max-sm:gap-[28px] items-center px-[40px] max-sm:px-[24px] lg:px-[80px] py-[64px] max-sm:py-[30px] relative shrink-0 w-full z-10"
       aria-labelledby="irpc-phase1-heading"
     >
       {/* ── Header ─────────────────────────────────────────── */}
@@ -40,7 +40,7 @@ export default function IrpcPhase1() {
           Phase1 - General UI Design
         </h2>
         <p
-          className="font-normal text-body w-full text-grey-700"
+          className="font-normal text-body max-sm:text-[18px] max-sm:leading-[1.4] w-full text-grey-700"
           style={{ fontVariationSettings: "'wdth' 100" }}
         >
           The first phase focused on building the design system and finalizing key pages with unique layouts. This helped give the client a clear visual direction for the initial delivery.
@@ -49,7 +49,7 @@ export default function IrpcPhase1() {
 
       {/* ── Screenshots ──────────────────────────────────── */}
       <motion.div
-        className="flex flex-col gap-[40px] w-full"
+        className="flex flex-col gap-[40px] max-sm:gap-[24px] w-full"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
