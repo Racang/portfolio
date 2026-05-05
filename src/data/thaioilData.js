@@ -2,17 +2,18 @@
 // Figma MCP temporary URLs — replace with local public/images/thaioil-*.ext paths
 // once assets are exported and placed in /public/images/.
 
+const base = import.meta.env.BASE_URL
+
 export const thaioilImages = {
   // Role card
-  computerIcon: 'https://www.figma.com/api/mcp/asset/5f835976-eff2-45da-8d5e-23a31a1b010e',
+  computerIcon: `${base}gena/db2f04457f0b478674721c461038ac1b4e33e4a9.png`,
 
   // WhatIDid — hero screenshot
   uiHomepage: 'https://www.figma.com/api/mcp/asset/87d0d095-81a6-4572-9289-1ab2548a4ad0',
 
   // Challenge section icons
-  challengeIcon1: 'https://www.figma.com/api/mcp/asset/0ee634c7-da76-478e-82df-03b4e685d5ec',
-  challengeIcon2: 'https://www.figma.com/api/mcp/asset/26fd94fa-5470-42bb-ab5b-dd272cb37d7d',
-
+  challengeIcon1: `${base}images/Project_thaioil_ChallengeIcon01.png`, // Temporary — reuse IRPC challenge icon
+  challengeIcon2: `${base}images/Project_thaioil_ChallengeIcon02.png`, // Temporary — reuse IRPC challenge iconm
   // User Requirement illustration
   requirementIllustration: 'https://www.figma.com/api/mcp/asset/eeb8533d-e6f3-4f00-abfb-e380198d4369',
 

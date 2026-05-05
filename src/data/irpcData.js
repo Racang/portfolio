@@ -7,13 +7,13 @@ const base = import.meta.env.BASE_URL
 
 export const irpcImages = {
   // Role card icon
-  computerIcon:     'https://www.figma.com/api/mcp/asset/fa5e1951-0d50-4a9e-9558-86cf033d4ba5',
+  computerIcon:     `${base}gena/db2f04457f0b478674721c461038ac1b4e33e4a9.png`,
 
   // What I Did — right screenshot
   uiHomepage:       `${base}images/IRPC_UI_Homepage_1.png`,
 
   // Challenge icon
-  challengeIcon:    'https://www.figma.com/api/mcp/asset/439348a7-ef02-40d2-825c-7a348e00dd5c',
+  challengeIcon:    `${base}images/Challenge_Icon.png`,
 
   // Proposal Design Direction — left image (both directions composite)
   proposalImage:    `${base}images/Project_IRPC02.png`,
