@@ -3,40 +3,41 @@
 // All image URLs sourced from Figma MCP (node 40000526:1509)
 // ---------------------------------------------------------------------------
 
+const base = import.meta.env.BASE_URL
+
 export const irpcImages = {
   // Role card icon
   computerIcon:     'https://www.figma.com/api/mcp/asset/fa5e1951-0d50-4a9e-9558-86cf033d4ba5',
 
   // What I Did — right screenshot
-  uiHomepage:       'https://www.figma.com/api/mcp/asset/517a4a49-1643-4daf-855e-c20704a4367a',
+  uiHomepage:       `${base}images/IRPC_UI_Homepage_1.png`,
 
   // Challenge icon
   challengeIcon:    'https://www.figma.com/api/mcp/asset/439348a7-ef02-40d2-825c-7a348e00dd5c',
 
   // Proposal Design Direction — left image (both directions composite)
-  proposalImage:    'https://www.figma.com/api/mcp/asset/3eed51f8-d7e0-43b1-86c6-f540bd491164',
-
+  proposalImage:    `${base}images/Project_IRPC02.png`,
   // Design Direction — colour-palette overview strip
-  paletteImage:     'https://www.figma.com/api/mcp/asset/5cb5a872-4fb8-4c6e-88d3-0ded191990f0',
+  paletteImage:     `${base}images/Project_IRPC02_1.png`,
 
   // Design Direction cards (updated — equal height ~1427px for top-alignment)
-  direction21:      'https://www.figma.com/api/mcp/asset/7765808a-afda-4277-afdf-64b828fd5a17',
-  direction22:      'https://www.figma.com/api/mcp/asset/2631db5b-3598-4ebc-9168-2ae205d93d3a',
-  direction23:      'https://www.figma.com/api/mcp/asset/5762ca6a-04cf-4452-bac9-c4994475cae2',
+  direction21:      `${base}images/Project_IRPC03.png`,
+  direction22:      `${base}images/Project_IRPC04.png`,
+  direction23:      `${base}images/Project_IRPC05.png`,
 
   // Phase 1 screens
-  phase1StyleGuide: 'https://www.figma.com/api/mcp/asset/d9ada589-b752-4e47-98a1-284b0373b3b1',
-  phase1Home:       'https://www.figma.com/api/mcp/asset/f065f1c2-ee1a-4a3f-87a2-12259dc7738c',
-  phase1News:       'https://www.figma.com/api/mcp/asset/84fd24ae-ef88-4262-8f2b-4c8afadc4cdf',
-  phase1About:      'https://www.figma.com/api/mcp/asset/98939ba6-183b-45ec-8b29-8f1fce799e47',
+  phase1StyleGuide: `${base}images/Project_IRPC10.png`,
+  phase1Home:       `${base}images/Project_IRPC11.png`,
+  phase1News:       `${base}images/Project_IRPC14.png`,
+  phase1About:      `${base}images/Project_IRPC12.png`,
 
   // Phase 2 — side-by-side preview thumbnails
-  phase2Image1:     'https://www.figma.com/api/mcp/asset/e2d0268a-42a0-46ed-84a6-de0a62ae013e',
-  phase2Image2:     'https://www.figma.com/api/mcp/asset/110ed3c3-a2a8-4602-a4b8-8e09bb10d474',
+  phase2Image1:     `${base}images/Project_IRPC06.png`,
+  phase2Image2:     `${base}images/Project_IRPC07.png`,
 
   // Phase 2 — full-width screens
-  phase2StyleGuide: 'https://www.figma.com/api/mcp/asset/2f9a1d7b-cd77-47e0-b807-89b33712bc29',
-  phase2Home:       'https://www.figma.com/api/mcp/asset/3a3e4129-62c2-4eac-bc82-198c1465d777',
+  phase2StyleGuide: `${base}images/Project_IRPC08.png`,
+  phase2Home:       `${base}images/Project_IRPC09.png`,
 }
 
 // ---------------------------------------------------------------------------
